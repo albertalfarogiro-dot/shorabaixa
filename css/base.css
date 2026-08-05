@@ -394,7 +394,10 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
   .r-b .cap-tx{text-align:left;padding:26px 20px 0}
   .r-d{padding:64px 20px;text-align:left;--marge:20px}
   .r-d .cap-tx h3,.r-d .cap-tx p{margin-left:0;max-width:none}
-  .r-e{min-height:auto;padding:0;--marge:20px}
+  /* el mateix aire per sota que la resta de ritmes: amb padding:0, els
+     capítols VI i VII eren els dos únics del relat que s'enganxaven al
+     que ve després i es notava que anaven a part */
+  .r-e{min-height:auto;padding:0 0 56px;--marge:20px}
   .r-e .cap-im{position:static;aspect-ratio:4/5}
   .r-e .cap-vel{display:none}
   .r-e .cap-tx{padding:26px 20px 0;color:inherit}
