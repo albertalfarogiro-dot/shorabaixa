@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El catàleg — S’Horabaixa</title>
+<meta name="description" content="Col·lecció Costa Brava · S1. Les nostres peces, permanents; cinc colors de Fons i una carta anual de tres colors mesurats de l’arxiu, seriats i numerats. Les formes no caduquen; el color té data.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="carregat">
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap" class="fosc">
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="index.html#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+    <button class="cistella" id="obreCistella" aria-label="Obrir la cistella">Cistella <span id="numCistella">0</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ CAPÇALERA ═════════════════════════════════════════════════════ -->
+<section class="pag-cap">
+  <div class="wrap">
+    <p class="kicker clar">Col·lecció Costa Brava · <span class="cs1">S1</span></p>
+    <h1 class="serif">Les formes no caduquen.<br>El color té data.</h1>
+    <p class="lede">Les nostres peces es reposen any rere any i no es rebaixen mai, i tres colors
+      nous cada estiu que no es trien en una reunió: <em class="rosa">es mesuren d’una fotografia
+      de l’arxiu</em>, amb el seu lloc i el seu minut. Se’n fa una tirada curta i numerada; quan
+      s’acaba, el color es tanca.</p>
+    <p class="lede" style="margin-top:16px">Aquesta és la <b>primera col·lecció</b>: el bressol,
+      de Sant Feliu a Begur. No et venem una peça —et venem una llum, una hora i un lloc, seriats i
+      numerats. <em class="rosa">Peces exclusives d’un estiu que no torna.</em></p>
+  </div>
+</section>
+
+<!-- ═══ PER QUÈ NO FEM TEMPORADES ═════════════════════════════════════ -->
+<section class="banda sal" id="perque">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">01 · El plantejament</p>
+        <h2 class="serif mitja">Per què no<br>fem temporades</h2>
+      </div>
+      <p class="lede petit">Et diem que tinguis tres camises i les portis deu estius. Una marca
+        que et diu això i tot seguit t’ensenya una col·lecció nova cada tres mesos
+        <em class="ac">s’està rient de tu</em>.</p>
+    </div>
+    <div class="veu" style="margin-top:56px">
+      <div class="veu-c">
+        <h4>El que no canviarà</h4>
+        <p>La forma de les peces.</p>
+        <p class="perque">Una camisa que està ben resolta no millora perquè li canviem el coll
+          cada any. Les nostres peces són les mateixes any rere any, i la que et compris avui
+          es podrà reposar d’aquí a cinc estius.</p>
+      </div>
+      <div class="veu-c">
+        <h4>El que sí que canviarà</h4>
+        <p>El color, i una vegada l’any.</p>
+        <p class="perque">Tres colors nous cada estiu, mesurats de tres vespres concrets.
+          És l’únic que et donarà la sensació que hi ha alguna cosa nova, i és l’única cosa
+          nova que et volem donar.</p>
+      </div>
+    </div>
+    <p class="mk-cita" style="margin-top:56px">Una peça no caduca.<br>Un vespre, sí.</p>
+  </div>
+</section>
+
+<!-- ═══ EL FONS I LA CARTA ════════════════════════════════════════════ -->
+<section class="banda sorra" id="arquitectura">
+  <div class="wrap">
+    <p class="kicker">02 · L’arquitectura</p>
+    <h2 class="serif mitja" style="margin:20px 0 42px">Dues coses, i prou</h2>
+    <div class="arq">
+      <article class="arq-c">
+        <h3 class="serif">El Fons</h3>
+        <p class="arq-sub stamp">El que sempre hi és</p>
+        <ul>
+          <li>Les nostres peces, permanents</li>
+          <li>Cinc colors de la família terra</li>
+          <li>Sempre disponibles, mai rebaixats</li>
+          <li>Es reposen any rere any</li>
+        </ul>
+        <p>No la rebaixarem mai, i no perquè siguem tossuts: <b>no hi ha cap dia de l’any en
+          què et convingui esperar</b>. La mateixa camisa en Sal hi serà l’any que ve i el següent.</p>
+      </article>
+      <article class="arq-c">
+        <h3 class="serif">La Carta</h3>
+        <p class="arq-sub stamp">El que passa una vegada</p>
+        <ul>
+          <li>Tres colors l’any, amb data</li>
+          <li>Es poden demanar a qualsevol peça</li>
+          <li>Més una peça de l’any, de tirada tancada</li>
+          <li>Producció única i numerada</li>
+        </ul>
+        <p>Tampoc, i per la raó contrària: <b>quan s’acaba, no en queda</b>. La tirada és curta
+          i numerada, i el color es tanca. Si el vols, el moment és quan hi és.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL SISTEMA DE COLOR ═══════════════════════════════════════════ -->
+<section class="banda sal" id="color">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">03 · El color</p>
+        <h2 class="serif mitja">Mesurat,<br>no triat</h2>
+      </div>
+      <p class="lede petit">De cada color se’n mostreja una regió concreta d’una fotografia
+        concreta, promitjant només la banda central de lluminositat —es descarta l’ombra fonda i
+        el reflex cremat— i es converteix a <em>CIELAB</em>, que és el valor que entén un tintorer.
+        <em class="ac">El tint s’ha d’acostar tant al valor mesurat que, posant la mostra
+        damunt de la fotografia, no es distingeixin.</em></p>
+    </div>
+
+    <h3 class="col-tit">El Fons · cinc colors que no canvien mai</h3>
+    <div class="fons-grid" id="fonsGrid"></div>
+
+    <h3 class="col-tit">La Carta <span id="cartaAny"></span> · <em id="cartaTitol"></em></h3>
+    <p class="lede petit col-intro" id="cartaIntro"></p>
+    <div class="carta-grid" id="cartaGrid"></div>
+
+    <div class="etq-demo">
+      <div>
+        <p class="kicker">L’etiqueta</p>
+        <p class="lede petit" style="margin-top:14px">L’etiqueta teixida interior no diu «rosa».
+          Diu d’on ve el color, quin dia i quin minut, i quin número de la tirada tens a les mans.</p>
+      </div>
+      <pre class="etq">ROSA 19:35
+Illots de Sant Jordi · Sant Antoni de Calonge
+29.09.2023 · posta exacta
+Costa Brava · S1 — Carta 2027 · 84 de 180</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LES DOTZE PECES ═══════════════════════════════════════════════ -->
+<section class="banda lli" id="peces" style="background:var(--lli)">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">04 · Les peces</p>
+        <h2 class="serif mitja">Les nostres peces.<br>Tot el dia.</h2>
+      </div>
+      <p class="lede petit"><b>Totes les nostres peces són la Col·lecció Costa Brava · <span class="cs1">S1</span>.</b> Unisex primer: només se separa el que l’anatomia obliga a separar.
+        Tot de la XS a la XXL, al mateix preu, des de la primera producció.
+        <em class="ac">La franja que porta cada peça no és quan s’ha de posar: és tot
+        l’estirament que aguanta.</em></p>
+    </div>
+    <div class="filtres" id="filtres"></div>
+    <div class="graella" id="graella"></div>
+    <p class="nota">Preus sense IVA. Això és una maqueta: la reserva no és real i no es cobra res.
+      La primera producció de la Col·lecció Costa Brava · S1 surt la primavera del 2027.</p>
+  </div>
+</section>
+
+<!-- ═══ ELS NOMS ══════════════════════════════════════════════════════ -->
+<section class="banda vespre" id="noms">
+  <div class="wrap">
+    <p class="kicker clar">05 · Els noms</p>
+    <h2 class="serif mitja clar" style="margin:20px 0 26px">Cap peça no porta<br>nom de cala</h2>
+    <p class="lede clar" style="max-width:64ch">Un nom de lloc depèn de la fotografia amb què es
+      va presentar, i la fotografia canvia cada sessió: <em class="rosa">el nom mentiria el segon
+      any</em>. Ja ens va passar una vegada, amb vuit noms de cala assignats a ull que no
+      coincidien amb cap de les fotografies.</p>
+    <p class="lede clar" style="max-width:64ch;margin-top:18px">Els noms surten de <b>l’hora i del
+      gest</b>, que són nostres i no caduquen. I el lloc no desapareix: passa a ser un
+      <b>segell d’origen</b> amb data i coordenades, que sí que es pot canviar sense que la peça
+      canviï de nom.</p>
+    <div class="tres" style="margin-top:64px">
+      <div>
+        <span class="num" style="color:var(--rosa)">—</span>
+        <h3 style="color:var(--sal)">de les Vuit</h3>
+        <p style="color:rgba(245,241,233,.76)">L’hora en què surts sense haver-te canviat.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">—</span>
+        <h3 style="color:var(--sal)">de Ronda</h3>
+        <p style="color:rgba(245,241,233,.76)">El camí que separa la platja del sopar.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">—</span>
+        <h3 style="color:var(--sal)">de Garbí</h3>
+        <p style="color:rgba(245,241,233,.76)">El vent de mar de la tarda, que bufa quan
+          encara ets a l’aigua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL QUE VE ═════════════════════════════════════════════════════
+     Pàgina pública: aquí no hi va res de negoci. Què creixerà i en quin
+     ordre, que és el que al client li interessa saber; les xifres viuen al
+     document 14 i al PDF, que són interns.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="banda sal" id="creixement">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">06 · El que ve</p>
+        <h2 class="serif mitja">L’arquitectura<br>no canvia</h2>
+      </div>
+      <p class="lede petit">Només canvia quina part està oberta. Comencem amb poc i ben fet:
+        <em class="ac">el primer any la marca ha de demostrar que sap fer una camisa</em>,
+        i el color datat és el segon capítol.</p>
+    </div>
+    <ul class="filtres-llista" style="margin-top:44px">
+      <li><span class="fm-n stamp">Primer</span><b class="serif">Quatre peces</b>
+        <span>Camisa de les Vuit, Pantaló de Ronda, Banyador de Fons i Tovallola de Granit,
+          en tres colors del Fons. Cobreixen tors, cames, aigua i casa: el mínim per vestir
+          l’horabaixa sencer. <b>Encara sense Carta.</b></span></li>
+      <li><span class="fm-n stamp">Després</span><b class="serif">La primera Carta</b>
+        <span>S’obren els cinc colors del Fons i s’estrena la Carta amb els seus tres colors
+          datats. Qualsevol peça es pot demanar en qualsevol color, i el que és exclusiu de
+          l’any no és el color sinó <b>la tirada</b>: una peça es fa una vegada, numerada, i
+          no es repeteix mai més.</span></li>
+      <li><span class="fm-n stamp">I llavors</span><b class="serif">El catàleg sencer</b>
+        <span>El catàleg complet, amb Carta anual. A partir d’aquí l’estructura ja no ha de
+          tornar a canviar mai: només s’hi afegeixen colors nous cada estiu.</span></li>
+    </ul>
+
+    <div class="veu" style="margin-top:60px">
+      <div class="veu-c">
+        <h4>Peces que estudiem</h4>
+        <p>Una jaqueta fina de lli per a l’hora blava.</p>
+        <p class="perque">És l’únic buit real del catàleg: entre el xal i res. Hauria de passar
+          el test de les dues hores igual que la resta, i encara no tenim clar que hi passi.</p>
+      </div>
+      <div class="veu-c">
+        <h4>Colors que no farem</h4>
+        <p class="no">Cap color que no surti d’una fotografia.</p>
+        <p class="perque">Per molt que un blanc òptic o un negre pur es venguin bé. Si no el
+          podem mesurar d’un vespre concret, no entra a la Carta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LES VUIT REGLES ═══════════════════════════════════════════════ -->
+<section class="banda tinta" id="regles">
+  <div class="wrap">
+    <p class="kicker clar">07 · Les regles</p>
+    <h2 class="serif mitja clar" style="margin:20px 0 50px">Vuit coses que<br>no es discuteixen</h2>
+    <div class="codis-llista">
+      <article class="codi"><span class="codi-n serif">01</span><h3 class="serif">El test de les dues hores</h3>
+        <p>Una forma no surt si no serveix a les set, sortint de l’aigua, i a les nou, a taula.
+          Si t’has de canviar, ha fallat.</p></article>
+      <article class="codi"><span class="codi-n serif">02</span><h3 class="serif">Cap estampat. Mai</h3>
+        <p>Ni floral, ni tropical, ni geomètric. La textura sí; el dibuix no.</p></article>
+      <article class="codi"><span class="codi-n serif">03</span><h3 class="serif">Marcatge invisible</h3>
+        <p>Etiqueta teixida interior o brodat to sobre to. No es llegeix des de l’altra punta
+          de la platja.</p></article>
+      <article class="codi"><span class="codi-n serif">04</span><h3 class="serif">XS–XXL des del primer dia</h3>
+        <p>Al mateix preu. Una marca que fa la XXL «si hi ha demanda» ja ha dit qui li importa.</p></article>
+      <article class="codi"><span class="codi-n serif">05</span><h3 class="serif">Un sol grup de color</h3>
+        <p>Mai es barregen dues hores dins d’una mateixa peça.</p></article>
+      <article class="codi"><span class="codi-n serif">06</span><h3 class="serif">Cap rebaixa</h3>
+        <p>El Fons no caduca i la Carta s’esgota. No hi ha cap moment en què calgui descomptar.</p></article>
+      <article class="codi"><span class="codi-n serif">07</span><h3 class="serif">Cap color sense fotografia</h3>
+        <p>Amb lloc i data. Si no el podem mesurar, no el fem.</p></article>
+      <article class="codi"><span class="codi-n serif">08</span><h3 class="serif">Una frase per peça</h3>
+        <p>Si una peça no es pot explicar en una frase, no està resolta.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL QUE NO FAREM ══════════════════════════════════════════════ -->
+<section class="banda sorra" id="nofarem">
+  <div class="wrap">
+    <p class="kicker">08 · La promesa</p>
+    <h2 class="serif mitja" style="margin:20px 0 30px">El que no farem mai</h2>
+    <div class="tres" style="margin-top:0">
+      <div>
+        <span class="num" style="color:var(--terracota)">—</span>
+        <h3>Estampats</h3>
+        <p>Ni florals, ni tropicals, ni geomètrics. La textura sí; el dibuix no. És el que
+          separa aquesta costa d’una postal.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--terracota)">—</span>
+        <h3>Rebaixes</h3>
+        <p>Un preu que baixa al setembre diu que al juny era fals. Producció curta, i el que
+          queda es queda per a l’any que ve.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--terracota)">—</span>
+        <h3>Un color inventat</h3>
+        <p>Cap color entra a la Carta si no el podem mesurar d’una fotografia amb el seu lloc
+          i la seva hora. Per bonic que sigui.</p>
+      </div>
+    </div>
+    <p class="mk-cita" style="margin-top:56px">Tothom ven un lloc o un dibuix.<br>
+      Nosaltres venem una hora.</p>
+  </div>
+</section>
+
+<!-- ═══ HONESTAMENT ══════════════════════════════════════════════════ -->
+<section class="banda sal" id="falta">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">09 · Honestament</p>
+        <h2 class="serif mitja">On som ara</h2>
+      </div>
+      <p class="lede petit">Això encara és un projecte i no una botiga. Val més dir-ho aquí que
+        deixar-t’ho descobrir a tu.</p>
+    </div>
+    <ul class="filtres-llista" style="margin-top:40px">
+      <li><span class="fm-n stamp">01</span><b class="serif">Encara no hi ha peça física</b>
+        <span>Ni un patró, ni un prototip. Les imatges de producte d’aquesta pàgina són
+          <em>projeccions</em> de com serà cada peça, no fotografies d’una peça existent.
+          Les del territori i les de l’arxiu, en canvi, són totes reals.</span></li>
+      <li><span class="fm-n stamp">02</span><b class="serif">Falten postes per a la Carta següent</b>
+        <span>De tot l’arxiu, només dues fotografies cauen dins dels minuts que donen nom a la
+          marca. La Carta de l’any vinent necessita vespres nous, i s’hi ha d’anar.</span></li>
+      <li><span class="fm-n stamp">03</span><b class="serif">El color s’ha de poder tenyir</b>
+        <span>Mesurar un color d’una fotografia és fàcil; que un tintorer l’encerti en lli és
+          una altra cosa. Fins que no ho tinguem comprovat, la Carta no es posa a la venda.</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbaix stamp" style="margin-top:0;border:0;padding-top:0">
+      <span><a href="index.html">← Tornar a la portada</a></span>
+      <span><a href="marca.html">La marca →</a></span>
+      <span>S’Horabaixa · maqueta 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ FITXA ═════════════════════════════════════════════════════════ -->
+<div class="modal" id="fitxa" role="dialog" aria-modal="true" aria-label="Fitxa de producte">
+  <div class="modal-fons" data-tanca></div>
+  <div class="modal-cos">
+    <button class="tanca" data-tanca aria-label="Tancar">×</button>
+    <div class="fitxa-grid">
+      <div class="fitxa-im"><img id="fImg" src="" alt=""></div>
+      <div class="fitxa-tx">
+        <p class="stamp" style="color:var(--roca);margin-bottom:8px">Col·lecció Costa Brava · <span class="cs1">S1</span></p>
+        <p class="kicker" id="fTipus"></p>
+        <h3 class="serif" id="fNom"></h3>
+        <p class="fitxa-perque" id="fPerque"></p>
+        <p class="fitxa-dv" id="fDv"></p>
+        <div class="fitxa-preu"><span class="serif" id="fPreu"></span><span class="mini">IVA no inclòs</span></div>
+        <div class="talles" id="fTalles"></div>
+        <button class="btn ple" id="fAfegir">Reservar</button>
+        <dl class="fitxa-dl" id="fDl"></dl>
+        <!-- El color no es tria d'una fila de pastilles: es tria del vespre.
+             La línia va de −60 a +40 minuts respecte de la posta i el color
+             n'és la conseqüència. Els cinc del Fons van a part, fora de la
+             línia, perquè no pertanyen a cap minut. -->
+        <div class="tria" id="fTria"></div>
+        <p class="mini" id="fCura"></p>
+        <p class="fitxa-segell stamp" id="fSeg"></p>
+        <p class="fitxa-nota" id="fNota"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CISTELLA ══════════════════════════════════════════════════════ -->
+<div class="calaix" id="calaix" role="dialog" aria-modal="true" aria-label="Cistella">
+  <div class="calaix-fons" data-tancac></div>
+  <div class="calaix-cos">
+    <div class="calaix-cap">
+      <p class="kicker">La cistella</p>
+      <button class="tanca" data-tancac aria-label="Tancar">×</button>
+    </div>
+    <div id="calaixItems"></div>
+    <div class="calaix-peu">
+      <div class="calaix-total"><span>Total</span><span id="calaixTotal">0 €</span></div>
+      <p class="mini avis">Maqueta. La reserva no és real i no es cobra res.</p>
+      <button class="btn ple" style="margin-top:16px">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>

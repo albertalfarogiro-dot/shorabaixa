@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L’hora — S’Horabaixa</title>
+<meta name="description" content="L’arxiu de S’Horabaixa: vuitanta-cinc fotografies pròpies amb el lloc, el dia i els minuts que li falten al sol, calculats amb la posta real.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="carregat">
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap" class="fosc">
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="index.html#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<section class="pag-cap">
+  <div class="wrap">
+    <p class="kicker clar">L’arxiu</p>
+    <h1 class="serif">Tot el que passa <br>quan ja no hi ha ningú.</h1>
+    <p class="lede">Aquest és l’arxiu del qual surt la marca: anys de mirar la mateixa costa a la
+      mateixa hora abans que hi hagués cap peça de roba. <em class="rosa">Cada imatge sap quants
+      minuts li faltaven al sol</em> —i és el que fa que, quan diem una hora, la diguem de debò.</p>
+  </div>
+</section>
+
+<!-- ═══ EL RELLOTGE D’AVUI ════════════════════════════════════════════ -->
+<section class="banda llum">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">Ara mateix</p>
+        <h2 class="serif mitja">Avui, aquí</h2>
+        <p class="lede petit" style="margin-top:20px">Calculat en directe per a Palafrugell
+          (41,917 N · 3,163 E) amb l’algorisme de posta del NOAA, el mateix amb què es data l’arxiu.</p>
+      </div>
+      <div class="rellotge-box">
+        <div class="rellotge" id="rellotge">—</div>
+        <p class="estat" id="estat">calculant…</p>
+        <p class="mini" id="postaAvui"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL RECOMPTE ═══════════════════════════════════════════════════ -->
+<section class="banda sal">
+  <div class="wrap">
+    <p class="kicker">El recompte</p>
+    <h2 class="serif mitja" style="margin:20px 0 20px">El moment que venem <br>és més rar del que sembla</h2>
+    <p class="lede" style="max-width:66ch">Vuitanta-cinc fotografies fetes en aquesta costa, i
+      només dues cauen dins dels minuts que donen nom a la marca. No és mandra: és que aquell
+      moment dura poc, no avisa i s’ha de ser-hi. <em class="ac">Ensenyem el recompte sencer
+      perquè explica millor què venem que qualsevol adjectiu.</em></p>
+    <div class="recompte">
+      <div class="rc"><span class="rc-n serif">47</span><b>Ple dia</b>
+        <i>abans de −90 min</i><p>La llum de plom. La que castiga la roba i la que tria les fibres.</p></div>
+      <div class="rc"><span class="rc-n serif">20</span><b>La tarda que cau</b>
+        <i>de −90 a −55 min</i><p>Les ombres s’allarguen i el poble comença a sortir al carrer.</p></div>
+      <div class="rc"><span class="rc-n serif">16</span><b>Hora d’or</b>
+        <i>de −55 a −5 min</i><p>El sol hi és però ja no crema. És la franja que fem servir més.</p></div>
+      <div class="rc destaca"><span class="rc-n serif">1</span><b>Hora màgica</b>
+        <i>de −5 a +20 min</i><p>Una sola. 29 de setembre de 2023, 19:35, amb la posta a les 19:34.</p></div>
+      <div class="rc destaca"><span class="rc-n serif">1</span><b>Hora blava</b>
+        <i>de +20 a +55 min</i><p>Una sola. 29 d’agost de 2024, vint-i-dos minuts després que el sol marxés.</p></div>
+    </div>
+    <p class="nota" style="margin-top:44px">Que només n’hi hagi dues no és un defecte de l’arxiu:
+      és la mesura exacta de com d’estrany és el moment que la marca ven, i la primera cosa que
+      caldrà anar a buscar el dia que es faci la sessió de producte.</p>
+  </div>
+</section>
+
+<!-- ═══ LES DUES ══════════════════════════════════════════════════════ -->
+<section class="banda tinta">
+  <div class="wrap">
+    <p class="kicker clar">Les dues</p>
+    <h2 class="serif mitja clar" style="margin:20px 0 50px">El minut zero <br>i el minut vint-i-dos</h2>
+    <div class="dues">
+      <figure>
+        <div class="dues-im"><img data-im="MAGICA" data-mida="900" alt="Illots de Sant Jordi a la posta exacta"></div>
+        <figcaption>
+          <span class="dues-h serif">+0 min</span>
+          <h3 class="serif">Hora màgica</h3>
+          <p>El sol i l’aigua es toquen. És el que dibuixa el símbol de la marca, fotografiat
+            sense buscar-ho tres anys abans que hi hagués cap marca.</p>
+          <span class="stamp dues-seg">Illots de Sant Jordi, Sant Antoni de Calonge <br>
+            29.09.2023 · 19:35 · posta a les 19:34</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="dues-im"><img data-im="BLAVA" data-mida="900" alt="Hora blava sobre la costa"></div>
+        <figcaption>
+          <span class="dues-h serif">+22 min</span>
+          <h3 class="serif">Hora blava</h3>
+          <p>El sol ja no hi és i el cel encara fa de llum. Els pobles s’encenen d’un en un.
+            És la franja més curta de totes i la que gairebé ningú no es queda a veure.</p>
+          <span class="stamp dues-seg">Un racó de la Costa Brava <br>
+            29.08.2024 · 20:49 · posta a les 20:26</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ L’ARXIU ═══════════════════════════════════════════════════════ -->
+<section class="banda sorra">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">Una tria</p>
+        <h2 class="serif mitja">Ordenades pel sol, <br>no per la data</h2>
+      </div>
+      <p class="lede petit">De la més a prop de la posta a la més lluny. Cada una revelada amb la
+        llum que hi havia de veritat: <em class="ac">les de migdia no es maquillen d’horabaixa</em>,
+        perquè el dia sencer també és la marca.</p>
+    </div>
+    <div class="arxiu-graella" id="arxiuLlarg" style="margin-top:52px"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbaix stamp" style="margin-top:0;border:0;padding-top:0">
+      <span><a href="index.html">← Tornar a la portada</a></span>
+      <span><a href="territori.html">El territori →</a></span>
+      <span>S’Horabaixa · maqueta 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+<script>
+/* L'arxiu llarg. Ordenat pels minuts que falten al sol, de menys a més.
+   Cada peu porta el lloc al nivell de precisió que l'evidència aguanta. */
+(function () {
+  var A = [
+   ['MAGICA','Illots de Sant Jordi, Sant Antoni de Calonge','19:35','posta exacta'],
+   ['BLAVA','Un racó de la Costa Brava','20:49','+22 min'],
+   ['HERO','Cap Roig, Calonge i Sant Antoni','19:28','−6 min'],
+   ['OR_port','Sant Joan de Palamós','19:55','−10 min'],
+   ['OR_grua','Far de Palamós, Sant Joan de Palamós','20:08','−13 min'],
+   ['OR_cami','Sant Joan de Palamós','20:39','−21 min'],
+   ['OR_roca','Cala Moreta, Begur','19:38','−29 min'],
+   ['OR_moreta','Cala Moreta, Begur','19:36','−31 min'],
+   ['OR_platja','Cap Roig, Calonge i Sant Antoni','18:50','−44 min'],
+   ['OR_nuvols','Sant Joan de Palamós','20:14','−46 min'],
+   ['OR_far','Far de Palamós, Sant Joan de Palamós','19:34','−47 min'],
+   ['OR_calma','Illots de Sant Jordi, Sant Antoni de Calonge','18:43','−51 min'],
+   ['OR_pins','Sant Antoni de Calonge','20:25','−52 min'],
+   ['OR_esquena','s’Alguer, Palamós','19:46','−54 min'],
+   ['OR_branca','Sant Antoni de Calonge','20:23','−54 min'],
+   ['TAR_far','Un racó de la Costa Brava','19:20','−55 min'],
+   ['ALG_dalt','s’Alguer, Palamós','19:03','−56 min'],
+   ['TAR_silueta','Sant Antoni de Calonge','19:49','−61 min'],
+   ['TUN_pi','Sa Tuna, Begur','19:06','−61 min'],
+   ['TUN_barques','Sa Tuna, Begur','19:01','−66 min'],
+   ['TAR_roques','Sant Antoni de Calonge','18:28','−72 min'],
+   ['TUN_cases','Sa Tuna, Begur','18:55','−72 min'],
+   ['CAL_carrer','Port Bo, Calella de Palafrugell','18:41','−79 min'],
+   ['CAL_voltes','Port Bo, Calella de Palafrugell','18:39','−81 min'],
+   ['CAL_barca','Port Bo, Calella de Palafrugell','18:36','−84 min'],
+   ['CAL_balco','Port Bo, Calella de Palafrugell','18:35','−85 min'],
+   ['CAL_taules','Port Bo, Calella de Palafrugell','18:33','−87 min'],
+   ['DIA_columnes','Un racó de la Costa Brava','19:36','ple dia'],
+   ['DIA_columnes2','Un racó de la Costa Brava','19:36','ple dia'],
+   ['VIU_tamariu','Tamariu, Palafrugell','19:43','ple dia'],
+   ['VIU_tamariu2','Tamariu, Palafrugell','19:43','ple dia'],
+   ['DIA_tamariu','Tamariu, Palafrugell','18:51','ple dia'],
+   ['DIA_xelida','Aigua Xelida, Palafrugell','18:47','ple dia'],
+   ['DIA_xelida2','Aigua Xelida, Palafrugell','18:47','ple dia'],
+   ['DIA_bassa','Sant Feliu de Guíxols','18:13','ple dia'],
+   ['DIA_calc','Torre Valentina, Sant Antoni de Calonge','18:43','ple dia'],
+   ['DIA_onada','Sant Antoni de Calonge','18:32','ple dia'],
+   ['DIA_cala','Un racó de la Costa Brava','18:49','ple dia'],
+   ['VIU_barca','s’Alguer, Palamós','19:39','ple dia'],
+   ['DIA_tuna','Sa Tuna, Begur','17:14','ple dia'],
+   ['DIA_alguer','s’Alguer, Palamós','14:39','ple dia'],
+   ['VIU_roca','Sant Antoni de Calonge','12:02','ple dia'],
+   ['DIA_plata','Cala dels Capellans, Sant Antoni de Calonge','10:56','matí'],
+   ['MAT_escuma','Cala dels Capellans, Sant Antoni de Calonge','10:53','matí'],
+   ['MAT_aigua','Cala dels Capellans, Sant Antoni de Calonge','10:53','matí'],
+   ['MAT_granit','Cala dels Capellans, Sant Antoni de Calonge','10:52','matí'],
+   ['MAT_roca','Cala dels Capellans, Sant Antoni de Calonge','10:52','matí'],
+   ['MAT_peu2','Un racó de la Costa Brava','10:51','matí'],
+   ['MAT_peu','Un racó de la Costa Brava','10:50','matí'],
+   ['MAT_ratlla','Un racó de la Costa Brava','10:50','matí'],
+   ['DIA_ocell','Cala dels Capellans, Sant Antoni de Calonge','10:08','matí']];
+  var g = document.getElementById('arxiuLlarg');
+  A.forEach(function (a) {
+    var f = document.createElement('figure');
+    f.innerHTML = '<img src="img/' + a[0] + '.jpg" alt="' + a[1] + '">' +
+      '<figcaption>' + a[1] + ' <br>' + a[2] + ' <em>' + a[3] + '</em></figcaption>';
+    g.appendChild(f);
+  });
+})();
+</script>
+</body>
+</html>

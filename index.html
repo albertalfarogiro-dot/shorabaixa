@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S’Horabaixa — No venem un lloc. Venem una hora.</title>
+<meta name="description" content="Roba d’estiu mediterrània feta per a l’última hora de llum. Costa Brava. Cada fotografia porta el lloc, el dia i els minuts que li falten al sol.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/base.css">
+<link rel="preload" as="image" href="img/HERO_ample-2000.avif" media="(min-width:861px)">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="ld-box">
+    <div class="ld-clip"><div class="ld-sol"></div></div>
+    <div class="ld-lin"></div>
+    <div class="ld-nom">S’HORABAIXA</div>
+    <div class="ld-hora" id="ldHora"></div>
+  </div>
+</div>
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap">
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+    <button class="cistella" id="obreCistella" aria-label="Obrir la cistella">Cistella <span id="numCistella">0</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ 1 · HERO ══════════════════════════════════════════════════════
+     Una sola imatge i cap vídeo: un MP4 a 4 Mbit és més tou que una
+     fotografia. L'illot de Cap Roig és el símbol de la marca trobat al
+     natural, sis minuts abans de la posta. El titular va en tinta fosca
+     damunt del cel, mai en blanc damunt d'una foto, i res no baixa de la
+     línia d'horitzó.
+─────────────────────────────────────────────────────────────────────── -->
+<!-- ═══ 0 · L'HORA, A LA MÀ · només al telèfon ══════════════════════
+     A l'escriptori el rellotge és una nota al peu del hero. Al telèfon és
+     el primer que hi ha, a pantalla sencera: qui obre això a les 20:41 a la
+     roca no ve a veure una web, ve a saber quant li queda.
+     Es pinta amb la llum d'aquest minut, la mateixa corba que la barra
+     d'estat i el carregador.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="hora-ma" id="horaMa" aria-label="L’hora, ara">
+  <div class="hm-cos">
+    <p class="stamp hm-lloc">Costa Brava · 41,917 N · 3,163 E</p>
+    <p class="hm-h serif" id="hmHora">—</p>
+    <p class="hm-f serif" id="hmFranja"></p>
+    <p class="hm-min" id="hmMin"></p>
+  </div>
+  <div class="hm-peu">
+    <span class="hm-hor" aria-hidden="true"></span>
+    <p class="stamp">Baixa: el dia avança</p>
+  </div>
+</section>
+
+<section class="hero" id="hero">
+  <div class="hero-quadre">
+    <picture class="hero-im">
+      <source type="image/avif" media="(min-width:861px)"
+        srcset="img/HERO_ample-1400.avif 1400w, img/HERO_ample-2000.avif 2000w, img/HERO_ample-3024.avif 3024w"
+        sizes="100vw">
+      <source type="image/webp" media="(min-width:861px)"
+        srcset="img/HERO_ample-1400.webp 1400w, img/HERO_ample-2000.webp 2000w"
+        sizes="100vw">
+      <source type="image/avif"
+        srcset="img/HERO_alt-480.avif 480w, img/HERO_alt-900.avif 900w, img/HERO_alt-1400.avif 1400w"
+        sizes="100vw">
+      <source type="image/webp"
+        srcset="img/HERO_alt-480.webp 480w, img/HERO_alt-900.webp 900w"
+        sizes="100vw">
+      <img src="img/HERO_alt.jpg" width="2677" height="3347" fetchpriority="high" decoding="async"
+        alt="L’illot de Cap Roig, a Calonge i Sant Antoni, sis minuts abans de la posta">
+    </picture>
+    <div class="hero-cont">
+      <div class="hero-tx">
+        <p class="hero-kick">Col·lecció Costa Brava · <span class="cs1">S1</span></p>
+        <h1 class="serif">No venem un lloc.<br>Venem una hora.</h1>
+        <hr class="hero-rat">
+        <p class="hero-sub">La roba que puja de l’aigua a la taula<br>sense passar per casa.</p>
+        <p class="hero-sub" style="margin-top:10px;opacity:.9">Sal a la pell, la llum de biaix, i setanta minuts que no tornen.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#relat">Entra al moment</a>
+          <a class="lk" href="cataleg.html">Les nostres peces →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- La cartel·la porta dos segells amb la mateixa tipografia i la mateixa
+       unitat: el de la fotografia, del 2023, i el d'ara mateix. El rellotge
+       no és una secció: és una nota al peu del quadre. -->
+  <figcaption class="hero-peu">
+    <span class="stamp">Cap Roig, Calonge i Sant Antoni · 29 de setembre de 2023 · 19:28
+      · <em>sis minuts abans de la posta</em></span>
+    <span class="stamp hero-coord">41,8265 N · 3,0830 E</span>
+    <span class="stamp hero-ara" id="heroAra"></span>
+  </figcaption>
+</section>
+
+<!-- ═══ 2 · D'ON VE LA MARCA · Sal ════════════════════════════════════
+     Això no és el manifest —el manifest són les nou línies de
+     manifest.html—: és la introducció que hi porta.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="banda b-sal" id="hora">
+  <div class="wrap center">
+    <p class="kicker">El que fem</p>
+    <h2 class="serif s8 manifest-t">Hi ha una hora, cada dia,<br>
+      en què el Mediterrani<br>es torna un altre lloc.</h2>
+    <p class="lede">Comença quan la llum deixa de caure a plom i s’acaba quan el cel deixa de fer
+      de llum. Dura entre setanta i noranta minuts i canvia cada dia. D’aquesta hora en surt tot:
+      el nom, els colors, la manera de fotografiar i el criteri per triar un teixit.
+      <em class="ac">És d’aquí que ve la marca.</em> I d’un lloc concret: la Costa Brava, de Sant
+      Feliu a Begur, que és on comença.</p>
+    <p class="lede" style="margin-top:20px">Però la roba no hi viu només. Es posa al matí, es
+      mulla al migdia, puja el camí de ronda a les set i seu a taula a les deu.
+      <em class="ac">La marca neix d’una hora; la roba les ha d’aguantar totes</em> —perquè una
+      peça que no aguanta el dia sencer no arriba a l’hora que importa.</p>
+    <p class="manifest-claim serif">Pensada per a una hora.<br>Feta per a tot el dia.</p>
+    <p class="mini" style="margin-top:26px"><a href="manifest.html">El manifest sencer · nou línies →</a></p>
+    <hr class="horitzo manifest-h">
+  </div>
+</section>
+
+<!-- ═══ 3 · LES DUES MEITATS · Lli ════════════════════════════════════
+     El mateix punt de la costa a les 12:02 i a les 19:49, amb set hores i
+     quaranta-set minuts pel mig. És tot l'argument dit amb dues imatges.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="banda b-lli" id="meitats">
+  <div class="wrap center">
+    <p class="kicker">La doble vida</p>
+    <h2 class="serif s7 manifest-t">El dia té dues meitats.<br>La roba ha de ser a totes dues.</h2>
+    <p class="lede">S’horabaixa no és una franja horària: és cap on va tot el dia. Per això no fem
+      roba <em>per a</em> l’última hora de llum. <em class="ac">Fem roba que hi arribi.</em></p>
+  </div>
+  <div class="meitats">
+    <figure class="mt mt-a">
+      <div class="mt-im"><img data-im="VIU_roca" data-mida="700" alt="Escull de les Cigales a les 12:02"></div>
+      <figcaption>
+        <span class="mt-h">12:02</span>
+        <h3>La meitat sòlida</h3>
+        <p>Dura vuit hores i la llum cau a plom. És on la peça es mulla, s’omple de sorra i es
+          queda la sal a dins. No és bonica i no la fotografia ningú, però és la que la posa a
+          prova: aquí una camisa barata ja ha perdut el color.</p>
+        <span class="mt-seg">Escull de les Cigales, Sant Antoni de Calonge · 2 d’agost · 12:02</span>
+      </figcaption>
+    </figure>
+    <div class="mt-eix" aria-hidden="true">
+      <span class="mt-linia"></span>
+      <span class="mt-lapse">7 h 47 min<br>el mateix lloc</span>
+      <span class="mt-linia"></span>
+    </div>
+    <figure class="mt mt-b">
+      <div class="mt-im"><img data-im="TAR_silueta" data-mida="700" alt="Escull de les Cigales a les 19:49"></div>
+      <figcaption>
+        <span class="mt-h">19:49</span>
+        <h3>La meitat fràgil</h3>
+        <p>Dura setanta minuts i no torna. La llum es gira, tot es fa llarg, i la mateixa peça que
+          has castigat tot el dia s’ha de poder seure a taula com si res. La fragilitat no és de
+          la roba: és de l’hora.</p>
+        <span class="mt-seg">Escull de les Cigales, Sant Antoni de Calonge · 14 d’agost · 19:49 · <em>−61 min</em></span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ 4 · EL RELAT ══════════════════════════════════════════════════
+     Set capítols, cinc ritmes diferents i una baixada de color que no
+     retrocedeix: Llum → Sorra → Or → Coral → Rosa → Malva → Hora blava.
+     La pàgina baixa amb el sol, que és el que deia el manual.
+─────────────────────────────────────────────────────────────────────── -->
+<section id="relat">
+  <div class="banda b-llum relat-cap">
+    <div class="wrap center">
+      <p class="kicker">Set capítols</p>
+      <h2 class="serif s8 manifest-t">Un horabaixa,<br>de cap a cap</h2>
+      <p class="lede">Set moments d’un mateix vespre, en l’ordre en què passen. Cap no està posat:
+        tots van passar, i la roba que fem existeix per acompanyar-los.
+        <em class="ac">Cada imatge porta els minuts que li falten al sol</em>, perquè aquí el
+        temps no és un detall: és el material.</p>
+    </div>
+  </div>
+  <div id="capitols"></div>
+</section>
+
+<!-- ═══ 5 · EL SILENCI ════════════════════════════════════════════════
+     Una pantalla sencera, una imatge i cap paraula nostra: només la
+     cartel·la, com al hero.
+
+     Ara va al final i no abans del relat, perquè per fi tenim una fotografia
+     de nit: fins ahir l'arxiu no en tenia cap i el silenci havia d'anar amb
+     el far a les 19:20, que trencava la baixada tornant a la llum. Amb la
+     lluna de les 22:42 el descens es tanca sol.
+─────────────────────────────────────────────────────────────────────── -->
+<figure class="silenci">
+  <img data-im="NIT_lluna" data-mida="1400" alt="La lluna damunt del mar, amb el far encès">
+  <figcaption>Far de Sant Sebastià · 22:42 · dues hores i quaranta-quatre minuts després</figcaption>
+</figure>
+
+<!-- ═══ 6 · LES QUATRE PORTES · Tinta ═════════════════════════════════ -->
+<section class="banda b-tinta" id="portes">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(40px,5vw,68px)">
+      <p class="kicker">Continua</p>
+      <h2 class="serif s7 clar" style="margin-top:20px">Quatre camins,<br>i cap és una botiga</h2>
+    </div>
+  </div>
+  <div class="portes">
+    <a class="porta" href="cataleg.html">
+      <div class="porta-im"><img data-im="IA_ronda" data-mida="480" alt=""></div>
+      <div class="porta-tx"><h3>El catàleg</h3>
+        <p>Les nostres peces no caduquen. Els tres colors de cada any, sí.</p>
+        <span class="lk">Veure’l →</span></div>
+    </a>
+    <a class="porta" href="territori.html">
+      <div class="porta-im"><img data-im="CAL_voltes" data-mida="480" alt=""></div>
+      <div class="porta-tx"><h3>El territori</h3>
+        <p>Vuit llocs amb coordenades. I un que no direm.</p>
+        <span class="lk">Recórrer-lo →</span></div>
+    </a>
+    <a class="porta" href="vivim.html">
+      <div class="porta-im"><img data-im="ALG_dalt" data-mida="480" alt=""></div>
+      <div class="porta-tx"><h3>Com vivim</h3>
+        <p>Vuit moments de gent i d’espai a la mateixa hora.</p>
+        <span class="lk">Entrar-hi →</span></div>
+    </a>
+    <a class="porta" href="marca.html">
+      <div class="porta-im"><img data-im="MAT_granit" data-mida="480" alt=""></div>
+      <div class="porta-tx"><h3>La marca</h3>
+        <p>El símbol, el color i els cinc filtres, per escrit.</p>
+        <span class="lk">Llegir-la →</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ 7 · EL PACTE · Vespre ═════════════════════════════════════════ -->
+<section class="banda b-vespre" id="pacte">
+  <div class="wrap">
+    <div class="pc">
+      <div>
+        <p class="kicker">El pacte</p>
+        <h2 class="serif s7 clar">No et venem una camisa.<br>Et venem les nou menys quart<br>
+          d’un vespre de finals de setembre.</h2>
+        <p class="lede">La camisa és el que et queda a les mans quan aquell vespre s’ha acabat.
+          Dins de la capsa hi ha la peça i quatre coses més que no has demanat, i que són
+          <em class="ac-clar">aquell moment desmuntat en parts</em>.</p>
+        <a class="btn clar" href="pacte.html">Llegir el pacte →</a>
+      </div>
+      <ul class="pc-llista">
+        <li><i>01</i><span>No farem rebaixes mai. Si en trobes una, et tornem la diferència.</span></li>
+        <li><i>02</i><span>De la XS a la XXL, al mateix preu, des del primer dia.</span></li>
+        <li><i>03</i><span>Te la reparem cinc anys, i el port el paguem nosaltres.</span></li>
+        <li><i>04</i><span>Cap lloc on no hàgim estat. Ho pots comprovar.</span></li>
+        <li><i>05</i><span>El teu número de tirada és real i auditable.</span></li>
+        <li><i>06</i><span>Seixanta dies per canviar d’opinió, sense preguntes.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8 · LA CARTA · Nit ════════════════════════════════════════════ -->
+<section class="banda b-nit" id="carta">
+  <div class="wrap center">
+    <p class="kicker">La carta</p>
+    <p class="cita">L’estiu s’acaba.<br>L’any que ve neix una marca.</p>
+    <p class="lede clar" style="margin-top:26px">Una carta cada divendres a l’hora de la posta,
+      amb els minuts exactes que li falten al sol. Res més.</p>
+    <form class="form" id="mail">
+      <label class="oculta" for="correu">El teu correu</label>
+      <input id="correu" type="email" placeholder="el teu correu" required>
+      <button type="submit">Rebre-la</button>
+    </form>
+    <p class="mini clar" id="mailOk"></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <svg width="44" height="20" viewBox="0 0 74 30" aria-hidden="true">
+          <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+          <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+        <p class="peu-claim">Pensada per a una hora.<br>Feta per a tot el dia.</p>
+      </div>
+      <div><h4>Mirar</h4><ul>
+        <li><a href="#relat">El relat</a></li><li><a href="cataleg.html">El catàleg</a></li>
+        <li><a href="vivim.html">Com vivim</a></li><li><a href="territori.html">El territori</a></li>
+        <li><a href="lhora.html">L’hora</a></li></ul></div>
+      <div><h4>Saber</h4><ul>
+        <li><a href="manifest.html">El manifest</a></li><li><a href="marca.html">La marca</a></li>
+        <li><a href="pacte.html">El pacte</a></li><li><a href="pacte.html#certificat">El certificat</a></li>
+        <li><a href="marca.html#paleta">El color</a></li><li><a href="marca.html#veu">La veu</a></li></ul></div>
+      <div><h4>Escriure</h4><ul>
+        <li><a href="#carta">La carta</a></li><li>@shorabaixa</li>
+        <li>hola@shorabaixa.com</li></ul></div>
+    </div>
+    <div class="fbaix stamp">
+      <span>S’Horabaixa · Costa Brava</span>
+      <span>Fotografia pròpia · lloc, dia i minuts fins a la posta</span>
+      <span>Maqueta · 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El manifest — S’Horabaixa</title>
+<meta name="description" content="Nou línies que no es reescriuen. El manifest de S’Horabaixa: per què existim, dit sense client a l’altra banda. El que et prometem, amb conseqüència, és el pacte.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="carregat">
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap" class="fosc">
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="index.html#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ CAPÇALERA ═════════════════════════════════════════════════════ -->
+<section class="pag-cap">
+  <div class="wrap">
+    <p class="kicker clar">El manifest</p>
+    <h1 class="serif">Nou línies <br>que no es reescriuen.</h1>
+    <p class="lede">Un manifest diu <em class="rosa">per què existim</em>. No promet res, perquè
+      no hi ha ningú a l’altra banda: no és per a tu, és per a nosaltres, i el fem públic perquè
+      es pugui comprovar que no ens n’allunyem. El que sí que et promet alguna cosa —i el que et
+      costa diners si l’incomplim— és <a href="pacte.html">el pacte</a>.</p>
+  </div>
+</section>
+
+<!-- ═══ LES NOU LÍNIES ════════════════════════════════════════════════ -->
+<section class="banda sal">
+  <div class="wrap">
+    <ol class="manifest-llista" id="manifestLlista"></ol>
+    <p class="mini" style="margin-top:56px;max-width:62ch">Aquestes nou van a l’interior de la
+      tapa de la capsa, al dors del certificat de cada peça i a la primera pàgina de qualsevol
+      document nostre. No se n’hi afegeix cap: si algun dia en calgués una desena, voldria dir
+      que una de les nou ha deixat de ser certa.</p>
+  </div>
+</section>
+
+<!-- ═══ TRES TEXTOS, TRES FEINES ══════════════════════════════════════
+     La confusió que això resol: durant mesos vam tenir tres pàgines
+     fent de manifest alhora i, per tant, cap.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="banda vespre">
+  <div class="wrap">
+    <p class="kicker clar">Per no confondre’ls</p>
+    <h2 class="serif mitja clar" style="margin-top:22px">Tres textos, <br>i cadascun fa una feina</h2>
+    <div class="tres" style="margin-top:70px">
+      <div>
+        <span class="num" style="color:var(--rosa)">01</span>
+        <h3 style="color:var(--sal)">El manifest</h3>
+        <p style="color:rgba(245,241,233,.76)">Diu per què existim. Parla en primera persona
+          del plural i no interpel·la ningú. <b>No es pot incomplir</b>, perquè no compromet
+          res davant de tu: declara.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">02</span>
+        <h3 style="color:var(--sal)"><a href="pacte.html" style="color:var(--sal);border-bottom:1px solid var(--rosa)">El pacte</a></h3>
+        <p style="color:rgba(245,241,233,.76)">Diu què t’enduus, què et prometem i què et
+          demanem. Parla de tu a tu i <b>té conseqüència econòmica</b>: si l’incomplim, et
+          tornem diners. Un text que et pot costar diners no és un manifest, és una garantia.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">03</span>
+        <h3 style="color:var(--sal)"><a href="marca.html#codis" style="color:var(--sal);border-bottom:1px solid var(--rosa)">Els codis</a></h3>
+        <p style="color:rgba(245,241,233,.76)">Diuen com es fan les coses aquí dins: el símbol,
+          les tintes, la veu, els cinc filtres. <b>Són d’ús intern</b> i es publiquen perquè
+          els puguis fer servir per assenyalar-nos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TANCAMENT ═════════════════════════════════════════════════════ -->
+<section class="banda tinta">
+  <div class="wrap center">
+    <p class="kicker clar">La línia sisena</p>
+    <p class="cita serif">La roba bona <br>és la que <em class="rosa">desapareix</em>.</p>
+    <p class="lede clar centrat">És la que costa més d’explicar i la que ho decideix tot. Si
+      t’emproves una peça nostra i penses «quina camisa», no hem fet bé la feina. La peça no és
+      el moment: n’és una part més, com la sal i com el camí.</p>
+    <p class="mini clar" style="margin-top:44px">
+      <a href="pacte.html">El pacte, on això es converteix en compromís →</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbaix stamp" style="margin-top:0;border:0;padding-top:0">
+      <span><a href="index.html">← Tornar a la portada</a></span>
+      <span><a href="marca.html">La marca →</a></span>
+      <span>S’Horabaixa · maqueta 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>

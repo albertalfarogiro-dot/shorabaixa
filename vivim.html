@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Com vivim — S’Horabaixa</title>
+<meta name="description" content="Vuit moments de gent i d’espai a l’última hora de llum de la Costa Brava. La roba no es porta: forma part del moment.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="carregat">
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap" class="fosc">
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="index.html#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ CAPÇALERA DE PÀGINA ═══════════════════════════════════════════ -->
+<section class="pag-cap">
+  <div class="wrap">
+    <p class="kicker clar">Com vivim</p>
+    <h1 class="serif">L’hora no és de ningú. <br>Per això és de tots.</h1>
+    <p class="lede">Aquesta pàgina no va de nosaltres. Va d’una costa on, cap a les vuit,
+      tothom acaba fent el mateix sense haver-ho quedat: sortir de l’aigua, pujar el camí,
+      seure i quedar-s’hi. <em class="rosa">No es pot comprar, no es pot reservar i ningú
+      la té en exclusiva</em> — la mateixa llum cau damunt de qui hi té casa i de qui hi ha
+      arribat a peu.</p>
+    <p class="lede" style="margin-top:20px">Aquí no hi ha models ni una platja triada per un
+      director d’art. Hi ha nou moments d’aquesta costa amb el seu lloc i la seva hora, i no
+      tots són de l’horabaixa: n’hi ha de les deu del matí i un de migdia. És deliberat —una
+      peça que només aguanta l’hora bonica no serveix.</p>
+  </div>
+</section>
+
+<!-- ═══ LA REGLA ══════════════════════════════════════════════════════ -->
+<section class="banda sal">
+  <div class="wrap">
+    <div class="marca-grid">
+      <div class="marca-tx">
+        <p class="kicker">La regla</p>
+        <h2 class="serif mitja">El test de <br>les dues hores</h2>
+        <p class="lede">Una peça entra a la col·lecció si serveix a les set, quan surts de
+          l’aigua, i encara serveix a les nou, quan seus a taula. Si per fer el trajecte
+          t’has de canviar, la peça ha fallat i no la fem.</p>
+        <p class="mini" style="margin-top:24px">És el filtre que ha deixat fora més coses que
+          cap altre. <a href="cataleg.html">Les dotze que el passen →</a></p>
+      </div>
+      <ul class="marca-codis">
+        <li><span class="mc-n stamp">18:30</span><span class="mc-t">Encara ets a l’aigua.
+          La peça ha d’aguantar sal, sorra i sol de costat.</span></li>
+        <li><span class="mc-n stamp">19:30</span><span class="mc-t">Puges pel camí de ronda.
+          La peça s’asseca a sobre teu, no en una tovallola.</span></li>
+        <li><span class="mc-n stamp">20:30</span><span class="mc-t">Seus a taula. La peça no ha
+          de semblar que ve de la platja, encara que en vingui.</span></li>
+        <li><span class="mc-n stamp">21:30</span><span class="mc-t">Refresca i encara hi ha
+          gent a taula. La mateixa peça, o la tovallola damunt les espatlles. Res més.</span></li>
+      </ul>
+      <p class="mini" style="grid-column:1/-1;margin-top:34px;max-width:64ch">Fixa’t que el test
+        no acaba a la posta: acaba <em class="ac">a taula i amb algú</em>. Una peça que et
+        resol la platja i et deixa incòmode al sopar no ens serveix, per bonica que sigui.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ELS VUIT MOMENTS ══════════════════════════════════════════════ -->
+<section class="banda lli" style="background:var(--lli)">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">Nou moments</p>
+        <h2 class="serif mitja">Comença sol <br>i acaba a taula</h2>
+      </div>
+      <p class="lede petit">Nou escenes petites, sense res d’extraordinari, posades en l’ordre
+        en què passen. <em class="ac">Al matí hi ha quatre persones; a les nou, el poble
+        sencer.</em> És exactament aquest trajecte el que la roba ha d’acompanyar.</p>
+    </div>
+    <div class="moments" id="momentsGrid" style="margin-top:64px"></div>
+  </div>
+</section>
+
+<!-- ═══ QUI HI VA ═════════════════════════════════════════════════════ -->
+<section class="banda vespre">
+  <div class="wrap">
+    <p class="kicker clar">Qui</p>
+    <h2 class="serif mitja clar">No és un públic objectiu. <br>És una manera d’estar-hi.</h2>
+    <div class="tres" style="margin-top:70px">
+      <div>
+        <span class="num" style="color:var(--rosa)">01</span>
+        <h3 style="color:var(--sal)">Hi torna cada any</h3>
+        <p style="color:rgba(245,241,233,.76)">Coneix la costa d’haver-hi anat, no d’haver-la
+          vista. Sap quin dia hi ha mercat i a quina hora marxa la gent de la platja. I hi va
+          amb qui hi anava fa vint anys —i, ara, també amb qui ha vingut després.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">02</span>
+        <h3 style="color:var(--sal)">Compra poc i bo</h3>
+        <p style="color:rgba(245,241,233,.76)">Té tres camises i les porta deu estius. Un preu
+          alt no li fa por; un preu alt sense motiu, sí. Per això diem d’on ve cada fibra, qui
+          la cus i què costa arreglar-la.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--rosa)">03</span>
+        <h3 style="color:var(--sal)">No hi va a fer-se veure</h3>
+        <p style="color:rgba(245,241,233,.76)">Ni estampats tropicals, ni logotips grans, ni res
+          que digui «estiu» des de vint metres. La marca va teixida a dins.
+          <em class="rosa">El que s’ha de veure és qui hi ha a taula.</em></p>
+      </div>
+    </div>
+    <p class="lede clar" style="margin-top:60px;max-width:60ch">No hi ha una edat per a això.
+      Hi ha qui hi baixa des dels trenta i qui hi baixa des de fa seixanta anys, sovint el
+      mateix vespre i sovint a la mateixa taula. <em class="rosa">Fem la roba per a totes dues
+      cadires.</em></p>
+    <p class="mini clar" style="margin-top:40px;max-width:70ch">Dues coses dites clares:
+      aquestes tres descripcions són <b>hipòtesis de treball</b>, no evidència de client —encara
+      no hem fet les entrevistes, i quan les fem això es reescriurà amb el que digui la gent i
+      no amb el que ens agradaria que digués. I <b>encara no tenim cap fotografia nostra de gent
+      junta a taula</b>: les que hi ha són dels llocs on la gent hi és. Fins que no en fem, no
+      en posarem cap de comprada.</p>
+  </div>
+</section>
+
+<!-- ═══ PER A QUÈ SERVEIXEN ═══════════════════════════════════════════
+     Sense això, aquesta pàgina és decoració maca. Les vuit fotografies
+     no il·lustren la marca: en són la matèria primera, perquè d'aquí
+     surten els colors que després es tenyeixen.
+─────────────────────────────────────────────────────────────────────── -->
+<section class="banda sal" id="arxiu">
+  <div class="wrap">
+    <div class="cap-secc">
+      <div>
+        <p class="kicker">L’arxiu</p>
+        <h2 class="serif mitja">Aquestes vuit <br>no il·lustren res</h2>
+      </div>
+      <p class="lede petit">Són vuit de les <b>vuitanta-cinc</b> fotografies datades i
+        geolocalitzades que tenim d’aquesta costa. I l’arxiu no és un àlbum:
+        <em class="ac">és d’on surt el color.</em></p>
+    </div>
+    <div class="tres" style="margin-top:64px">
+      <div>
+        <span class="num" style="color:var(--sorra)">01</span>
+        <h3>Es fotografia</h3>
+        <p>Amb el lloc, el dia i els minuts que li falten al sol. Si no ho podem calcular,
+          la fotografia no entra a l’arxiu.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--sorra)">02</span>
+        <h3>Es mesura</h3>
+        <p>Una regió concreta de la imatge es converteix a CIELAB, que és el llenguatge que
+          entén un tintorer. No es tria a ull en una reunió.</p>
+      </div>
+      <div>
+        <span class="num" style="color:var(--sorra)">03</span>
+        <h3>Es tenyeix</h3>
+        <p>El tint s’accepta si s’acosta prou al valor mesurat. Si no hi arriba, es refà:
+          un color que no coincideix amb la seva fotografia és decoració.</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:56px;max-width:64ch">És l’única cosa d’aquesta marca que
+      <em class="ac">no es pot fabricar</em>. Un patró es copia, un teixit es compra i un nom es
+      registra; una fotografia de les vuit i vint-i-tres d’un dia concret en un punt concret,
+      no. <a href="territori.html">El territori →</a> · <a href="cataleg.html">Els colors que
+      n’han sortit →</a></p>
+  </div>
+</section>
+
+<!-- ═══ LA CARTA ══════════════════════════════════════════════════════ -->
+<section class="banda tinta">
+  <div class="wrap center">
+    <p class="kicker clar">La carta</p>
+    <p class="cita serif">Cada divendres, <br>l’hora exacta de la posta.</p>
+    <form class="form" id="mail">
+      <label class="oculta" for="correu">El teu correu</label>
+      <input id="correu" type="email" placeholder="el teu correu" required>
+      <button type="submit">Rebre-la</button>
+    </form>
+    <p class="mini clar" id="mailOk"></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbaix stamp" style="margin-top:0;border:0;padding-top:0">
+      <span><a href="index.html">← Tornar a la portada</a></span>
+      <span>Fotografia pròpia · lloc, dia i minuts fins a la posta</span>
+      <span>S’Horabaixa · maqueta 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>
