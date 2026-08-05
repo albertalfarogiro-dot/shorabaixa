@@ -397,8 +397,13 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
   /* el mateix aire per sota que la resta de ritmes: amb padding:0, els
      capítols VI i VII eren els dos únics del relat que s'enganxaven al
      que ve després i es notava que anaven a part */
-  .r-e{min-height:auto;padding:0 0 56px;--marge:20px}
-  .r-e .cap-im{position:static;aspect-ratio:4/5}
+  /* .r-e és flex a l'escriptori perquè el text seu damunt de la fotografia.
+     Al mòbil la imatge deixa de ser absoluta i, si el contenidor segueix sent
+     flex, la imatge i el text passen a ser DOS ELEMENTS FLEX I S'ASSEUEN DE
+     COSTAT: la imatge es quedava a 346 px i el text a 154. Per això s'ha de
+     tornar a block, no només canviar el posicionament de la imatge. */
+  .r-e{display:block;min-height:auto;padding:0 0 56px;--marge:20px}
+  .r-e .cap-im{position:static;aspect-ratio:4/5;width:100%}
   .r-e .cap-vel{display:none}
   .r-e .cap-tx{padding:26px 20px 0;color:inherit}
   .r-e .cap-tx h3{color:inherit}
