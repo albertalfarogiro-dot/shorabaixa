@@ -1297,3 +1297,91 @@ h1.clar,h2.clar,h3.clar,.serif.clar{color:var(--i1)}
 .prop-d a{color:var(--vespre);text-decoration:underline;
   text-decoration-thickness:1px;text-underline-offset:3px}
 .prop-d a:hover{text-decoration-color:var(--rosa)}
+
+/* ── El catàleg vetllat ────────────────────────────────────────────────
+   Mentre no hi hagi peça física, el catàleg no es pot ensenyar com si es
+   pogués comprar. Però tampoc no s'amaga: es vetlla. La imatge queda
+   desenfocada —s'endevina la forma, no el detall—, desapareix el preu i
+   la targeta deixa de ser clicable. En passar-hi per sobre, la peça diu
+   què li passa: que encara no existeix i quan existirà.
+
+   Es tornarà enrere el dia de la presentació del catàleg. La versió amb
+   cistella és a _ARXIU/RESERVA_CATALEG_2026-08-06/.
+
+   El desenfocament va amb una mica d'escala perquè el blur d'una imatge
+   li menja les vores i, sense escalar-la, es veuria el marc del contenidor
+   per sota.
+──────────────────────────────────────────────────────────────────────── */
+.prod-vel{cursor:default}
+.prod-vel .prod-im img{filter:blur(11px) saturate(.82);transform:scale(1.12);
+  transition:filter 1.1s var(--corba),transform 1.1s var(--corba)}
+.prod-vel:hover .prod-im img{filter:blur(8px) saturate(.9);transform:scale(1.14)}
+
+.prod-prop{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:7px;text-align:center;
+  background:rgba(19,31,43,.34);opacity:0;transition:opacity .5s var(--corba)}
+.prod-vel:hover .prod-prop{opacity:1}
+.prod-prop b{font-weight:400;font-size:var(--t3);letter-spacing:.24em;
+  text-transform:uppercase;color:var(--sal)}
+.prod-prop i{font-style:normal;font-size:var(--t2);letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(245,241,233,.74)}
+
+/* On no hi ha ratolí no hi ha «passar per sobre»: al mòbil l'avís hi és
+   sempre, i el vel s'aclareix perquè no tapi la forma de la peça. */
+@media(hover:none){
+  .prod-prop{opacity:1;background:rgba(19,31,43,.26)}
+}
+
+/* El nom de la peça al territori ja no porta enlloc. */
+.terr-inert{cursor:default;border-bottom:0;color:var(--roca)}
+
+/* ── L'avís del catàleg vetllat ────────────────────────────────────────
+   Substitueix la nota de peu que deia «això és una maqueta». Ja no és una
+   nota al marge: mentre no hi hagi presentació, és l'única cosa que es pot
+   fer en aquesta pàgina, i per tant té el pes d'un bloc.
+──────────────────────────────────────────────────────────────────────── */
+.cat-avis{max-width:64ch;margin:clamp(48px,5vw,80px) auto 0;padding:30px 32px;
+  border:1px solid var(--sorra);background:rgba(230,220,199,.3);text-align:center}
+.cat-avis-t{font-size:var(--t3);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--vespre);margin-bottom:16px}
+.cat-avis-d{font-size:var(--t3);line-height:1.75;color:#4a4a48;margin-bottom:12px}
+.cat-avis-d:last-child{margin-bottom:0}
+.cat-avis-d a{color:var(--vespre);text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:4px}
+.cat-avis-d a:hover{text-decoration-color:var(--rosa)}
+@media(max-width:860px){.cat-avis{padding:24px 20px}}
+
+/* ── La franja d'estat ─────────────────────────────────────────────────
+   Una línia dins de la capçalera, sobre la navegació: que la col·lecció
+   encara no es ven i on es pregunta. No és un avís que es tanca, és
+   l'estat del projecte, i per això va sempre i a totes les pàgines.
+
+   Viu dins del <header>, que és sticky: així s'hi enganxa i, sobretot,
+   n'hereta la inversió de color quan la capçalera passa de clara a fosca.
+   No es pinta de blau fix perquè llavors, damunt d'una secció fosca, es
+   veuria una franja d'un blau i la navegació d'un altre.
+──────────────────────────────────────────────────────────────────────── */
+.franja{border-bottom:1px solid rgba(34,56,78,.14);
+  background:rgba(34,56,78,.045);transition:background .5s ease,border-color .5s ease}
+header.fosc .franja{background:rgba(245,241,233,.07);
+  border-bottom-color:rgba(245,241,233,.14)}
+.franja-c{max-width:var(--max);margin:0 auto;
+  padding:7px calc(var(--gut)*1.6);
+  display:flex;align-items:center;justify-content:space-between;gap:16px}
+.franja-t{font-size:var(--t1);letter-spacing:.24em;text-transform:uppercase;
+  color:inherit;margin:0;white-space:nowrap}
+.franja-p{color:var(--rosa);margin:0 .8em}
+.franja-m{font-size:var(--t1);letter-spacing:.1em;margin:0;opacity:.72;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.franja-m a{color:inherit;border-bottom:1px solid rgba(127,127,127,.5);padding-bottom:1px}
+.franja-m a:hover{border-bottom-color:var(--rosa)}
+
+@media(max-width:860px){
+  .franja-c{padding:6px 20px;gap:12px}
+  .franja-l{display:none}          /* «Més informació:» sobra quan hi ha poc lloc */
+}
+@media(max-width:520px){
+  .franja-t{letter-spacing:.16em}
+  .franja-p{margin:0 .5em}
+  .franja-m{font-size:calc(var(--t1) - 1px)}
+}

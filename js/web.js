@@ -451,9 +451,14 @@ function frase(a) {
     $('#terrCoord').textContent = c.coord;
     $('#terrQuan').textContent = c.quan + (c.min && c.min !== '—' ? ' · ' + c.min : '');
     $('#terrTx').textContent = c.tx;
+    /* Abans això obria la fitxa de la peça. Mentre el catàleg estigui vetllat
+       no hi ha fitxa que obrir, i una fletxa que no porta enlloc és pitjor que
+       no tenir-ne: es queda el nom, sense promesa de clic. */
     var a = $('#terrLink');
-    a.textContent = c.peca + ' →';
-    a.onclick = function (e) { e.preventDefault(); obreFitxa(c.pid); };
+    a.textContent = c.peca;
+    a.removeAttribute('href');
+    a.classList.add('terr-inert');
+    a.onclick = null;
   }
   pinta(LLOCS[0]);
 })();
@@ -629,19 +634,17 @@ var TALLES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'], talla = 'M', actual = null;
 
 /* la targeta de producte, una de sola per a la portada i per al catàleg */
 function targeta(p) {
-  var n = el('article', 'prod' + (p.secret ? ' secreta' : ''));
+  var n = el('article', 'prod prod-vel' + (p.secret ? ' secreta' : ''));
   n.innerHTML =
     '<div class="prod-im"><img data-im="' + p.im.replace('img/','').replace('.jpg','') +
       '" data-mida="480" alt="' + p.nom + '">' +
       '<span class="prod-etq">' + p.etq + '</span>' +
       (p.hora !== '—' ? '<span class="prod-hora stamp">' + p.hora + '</span>' : '') +
-      (p.imTipus === 'lloc' ? '<span class="prod-lloc stamp">el lloc</span>' : '') + '</div>' +
+      '<span class="prod-prop"><b>Properament</b><i>Estiu del 2027</i></span></div>' +
     '<h3 class="prod-nm">' + p.nom + '</h3>' +
     '<p class="prod-mt">' + p.tipus + '</p>' +
     '<p class="prod-seg">' + p.seg.split(' · ')[0] + '</p>' +
-    '<div class="prod-cols">' + pastilles(p) + '</div>' +
-    '<p class="prod-pr">' + p.preu + ' €</p>';
-  n.onclick = function () { obreFitxa(p.id); };
+    '<div class="prod-cols">' + pastilles(p) + '</div>';
   pintaImatges(n);
   return n;
 }

@@ -15,6 +15,16 @@
 <div id="progres" aria-hidden="true"><span></span></div>
 
 <header id="cap" class="fosc">
+  <!-- La franja d'estat. Va dins de la capçalera i no a fora: la capçalera
+       és sticky, i una franja germana seva se n'aniria amunt en baixar.
+       Aquí s'hi enganxa i n'hereta la inversió de color. -->
+  <div class="franja">
+    <div class="franja-c">
+      <p class="franja-t">Properament<span class="franja-p">·</span>Estiu del 2027</p>
+      <p class="franja-m"><span class="franja-l">Més informació:</span>
+        <a href="mailto:hola@shorabaixa.com?subject=S%E2%80%99Horabaixa">hola@shorabaixa.com</a></p>
+    </div>
+  </div>
   <div class="nav">
     <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
       <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
@@ -210,6 +220,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <script src="js/variants.js"></script>
 <script src="js/dades.js"></script>

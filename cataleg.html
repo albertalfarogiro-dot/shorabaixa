@@ -15,6 +15,16 @@
 <div id="progres" aria-hidden="true"><span></span></div>
 
 <header id="cap" class="fosc">
+  <!-- La franja d'estat. Va dins de la capçalera i no a fora: la capçalera
+       és sticky, i una franja germana seva se n'aniria amunt en baixar.
+       Aquí s'hi enganxa i n'hereta la inversió de color. -->
+  <div class="franja">
+    <div class="franja-c">
+      <p class="franja-t">Properament<span class="franja-p">·</span>Estiu del 2027</p>
+      <p class="franja-m"><span class="franja-l">Més informació:</span>
+        <a href="mailto:hola@shorabaixa.com?subject=S%E2%80%99Horabaixa">hola@shorabaixa.com</a></p>
+    </div>
+  </div>
   <div class="nav">
     <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
       <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
@@ -180,8 +190,19 @@ Costa Brava · S1 — Carta 2027 · 84 de 180</pre>
     </div>
     <div class="filtres" id="filtres"></div>
     <div class="graella" id="graella"></div>
-    <p class="nota">Preus sense IVA. Això és una maqueta: la reserva no és real i no es cobra res.
-      La primera producció de la Col·lecció Costa Brava · S1 surt la primavera del 2027.</p>
+    <!-- Sense fitxa que s'obri, aquest és l'únic lloc de la pàgina on es pot
+         fer alguna cosa. Per això va just sota la graella i no al peu. -->
+    <div class="cat-avis">
+      <p class="cat-avis-t">El catàleg encara no està obert</p>
+      <p class="cat-avis-d">Les peces de la <b>Col·lecció Costa Brava · S1</b> són decidides, però
+        cap no existeix encara: falta escollir el teixit, tancar el patró i fer les primeres. Fins
+        que no les tinguem a la mà no ensenyarem com són ni en direm el preu.
+        <b>La presentació serà l'estiu del 2027.</b></p>
+      <p class="cat-avis-d">Si vols saber-ne més —el teixit, les talles, quan sortirà una peça
+        concreta— escriu-nos a
+        <a href="mailto:hola@shorabaixa.com?subject=El%20cat%C3%A0leg">hola@shorabaixa.com</a>.
+        Contesta una persona, i normalment el mateix dia.</p>
+    </div>
   </div>
 </section>
 
@@ -397,6 +418,8 @@ Costa Brava · S1 — Carta 2027 · 84 de 180</pre>
     </div>
   </div>
 </div>
+
+
 
 
 <script src="js/variants.js"></script>
