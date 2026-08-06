@@ -251,7 +251,7 @@ const PRODUCTES = [
     cura:'Renta\u2019l a mà i no el planxis.',
     seg:'Port Bo, Calella de Palafrugell · 13.09.2024 · 18:35 · 41,8886 N 3,1848 E',
     nota:'És la peça de l\u2019any 2027: en Rosa 19:35 se\u2019n fan 180 i es numeren a ' +
-         'l\u2019etiqueta. Quan s\u2019acabin, el color es tanca i no es torna a fer.' },
+         'l\u2019etiqueta. Quan s\u2019acabin, la tirada es tanca i no es torna a fer.' },
 
   { id:'raco', nom:'el Racó', cat:'casa', tipus:'Casa', preu:60, secret:true,
     im:'img/IA_raco.jpg', imTipus:'producte', etq:'Ofici', hora:'—',
