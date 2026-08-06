@@ -32,6 +32,7 @@
 <link rel="stylesheet" href="css/base.css">
 </head>
 <body class="carregat">
+<a class="salta" href="#main">Salta al contingut</a>
 
 <div id="progres" aria-hidden="true"><span></span></div>
 
@@ -54,12 +55,11 @@
       <span class="wm">S’HORABAIXA</span>
     </a>
     <nav aria-label="Principal"><ul>
-      <li><a href="manifest.html">Manifest</a></li>
-      <li><a href="index.html#relat">El relat</a></li>
-      <li><a href="territori.html">El territori</a></li>
       <li><a href="cataleg.html">Catàleg</a></li>
-      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="lhora.html">L’hora</a></li>
       <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
       <li><a href="marca.html">La marca</a></li>
       <li><a href="contacte.html">Contacte</a></li>
     </ul></nav>
@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<main>
+<main id="main" tabindex="-1">
 
 <!-- ═══ CAPÇALERA ═════════════════════════════════════════════════════ -->
 <section class="pag-cap">
@@ -131,7 +131,7 @@
 <section class="banda sorra" id="arquitectura">
   <div class="wrap">
     <p class="kicker">02 · L’arquitectura</p>
-    <h2 class="serif mitja" style="margin:20px 0 42px">Dues coses, i prou</h2>
+    <h2 class="serif mitja" style="margin:20px 0 42px">Tres coses, i prou</h2>
     <div class="arq">
       <article class="arq-c">
         <h3 class="serif">El Fons</h3>
@@ -156,6 +156,24 @@
         </ul>
         <p>Tampoc, i per la raó contrària: <b>quan s’acaba, no en queda</b>. La tirada és curta
           i numerada, i el color es tanca. Si el vols, el moment és quan hi és.</p>
+      </article>
+      <!-- El tercer pilar. Sense ell, el web deia que el catàleg només creix
+           en colors, i alhora que cada racó nou serà una col·lecció nova: un
+           lector n'havia de deduir que la S2 seria la mateixa roba fotografiada
+           en un altre lloc. No ho és. -->
+      <article class="arq-c">
+        <h3 class="serif">La Col·lecció</h3>
+        <p class="arq-sub stamp">El que no torna</p>
+        <ul>
+          <li>Un racó del Mediterrani, i el seu mar</li>
+          <li>Peces que només existeixen aquí</li>
+          <li>Colors mesurats d’aquells vespres</li>
+          <li>Quan es tanca, es tanca sencera</li>
+        </ul>
+        <p>Aquesta és la <b>Costa Brava · S1</b>. La que vingui <b>serà una altra cosa</b>: peces
+          que allà tindran sentit i aquí no en tindrien, i colors d’aquell mar que no entraran
+          mai al Fons. No substitueix aquesta —<b>el Fons no es toca</b>— i tampoc no s’hi
+          barreja. <b>Una col·lecció que es tanca no es reobre.</b></p>
       </article>
     </div>
   </div>
@@ -289,8 +307,11 @@ Costa Brava · S1 — Carta 2027 · 84 de 180</pre>
           l’any no és el color sinó <b>la tirada</b>: una peça es fa una vegada, numerada, i
           no es repeteix mai més.</span></li>
       <li><span class="fm-n stamp">I llavors</span><b class="serif">El catàleg sencer</b>
-        <span>El catàleg complet, amb Carta anual. A partir d’aquí l’estructura ja no ha de
-          tornar a canviar mai: només s’hi afegeixen colors nous cada estiu.</span></li>
+        <span>El catàleg complet de la S1, amb Carta anual. A partir d’aquí <b>l’estructura</b>
+          ja no ha de tornar a canviar mai: el Fons es reposa, la Carta obre tres colors cada
+          estiu i, el dia que hi hagi un racó que ho justifiqui, <b>s’obre una col·lecció nova
+          amb les seves peces i els seus colors</b>. El que no farem mai és afegir peces perquè
+          sí a la que ja hi és.</span></li>
     </ul>
 
     <div class="veu" style="margin-top:60px">

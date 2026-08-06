@@ -1015,7 +1015,9 @@ footer{padding:56px 0 40px}
 .carta-tira{grid-template-columns:1fr;gap:34px;margin-top:36px}
 .tria-peu{margin-top:38px;gap:16px}
 }
-.arq{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--gut)*2.4)}
+/* Tres pilars des que hi ha La Col·lecció: el Fons, la Carta i el racó. */
+.arq{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--gut)*2)}
+@media(max-width:1080px){.arq{grid-template-columns:1fr;gap:calc(var(--gut)*2.2)}}
 .arq-c{border-top:2px solid var(--vespre);padding-top:24px}
 .arq-c:last-child{border-top-color:var(--ambre-tx)}
 .arq-c h3{font-family:var(--d);font-weight:400;font-size:var(--t7);color:var(--vespre)}
@@ -1406,3 +1408,14 @@ header.fosc .franja{background:rgba(245,241,233,.07);
 ──────────────────────────────────────────────────────────────────────── */
 .ct-mail{color:var(--vespre);border-bottom:2px solid var(--rosa);padding-bottom:4px}
 .ct-mail:hover{border-bottom-color:var(--vespre)}
+
+/* ── Salta al contingut ────────────────────────────────────────────────
+   Invisible fins que rep el focus. Amb set entrades de menú a cada
+   pàgina, qui navega amb teclat se les havia d'escoltar totes cada
+   vegada abans d'arribar al text.
+──────────────────────────────────────────────────────────────────────── */
+.salta{position:absolute;left:-9999px;top:0;z-index:300;
+  background:var(--vespre);color:var(--sal);padding:14px 22px;
+  font-size:var(--t2);letter-spacing:.18em;text-transform:uppercase}
+.salta:focus{left:0}
+main:focus{outline:none}
