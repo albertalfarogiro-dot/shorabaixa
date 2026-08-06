@@ -8,6 +8,27 @@
 <meta name="theme-color" content="#F5F1E9">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://shorabaixa.com/">
+
+<!-- Com es veu aquest enllaç quan algú l'enganxa a un missatge. Sense això
+     surt l'adreça pelada, que per a una marca que ven una imatge és el pitjor
+     que li pot passar en el moment en què més es comparteix. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S’Horabaixa">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:url" content="https://shorabaixa.com/">
+<meta property="og:title" content="S’Horabaixa — No venem un lloc. Venem una hora.">
+<meta property="og:description" content="Roba d’estiu mediterrània feta per a l’última hora de llum. Costa Brava. Cada fotografia porta el lloc, el dia i els minuts que li falten al sol.">
+<meta property="og:image" content="https://shorabaixa.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cap Roig, Calonge i Sant Antoni, sis minuts abans de la posta">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="stylesheet" href="css/base.css">
 <link rel="preload" as="image" href="img/HERO_ample-2000.avif" media="(min-width:861px)">
 </head>
@@ -50,6 +71,7 @@
       <li><a href="pacte.html">El pacte</a></li>
       <li><a href="vivim.html">Com vivim</a></li>
       <li><a href="marca.html">La marca</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
     </ul></nav>
     <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
       <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
@@ -118,7 +140,7 @@
         <p class="hero-kick">Col·lecció Costa Brava · <span class="cs1">S1</span></p>
         <h1 class="serif">No venem un lloc.<br>Venem una hora.</h1>
         <hr class="hero-rat">
-        <p class="hero-sub">La roba que puja de l’aigua a la taula<br>sense passar per casa.</p>
+        <p class="hero-sub">La roba que puja de l’aigua a la taula <br>sense passar per casa.</p>
         <p class="hero-sub" style="margin-top:10px;opacity:.9">Sal a la pell, la llum de biaix, i setanta minuts que no tornen.</p>
         <div class="hero-cta">
           <a class="btn" href="#relat">Entra al moment</a>
@@ -142,11 +164,32 @@
      Això no és el manifest —el manifest són les nou línies de
      manifest.html—: és la introducció que hi porta.
 ─────────────────────────────────────────────────────────────────────── -->
+<!-- ═══ ON SOM ════════════════════════════════════════════════════════
+     El web parlava en present d'un negoci que encara no opera, i la franja
+     de dalt diu «Properament». Aquesta banda posa les dues coses d'acord:
+     el que ve a continuació ja està decidit, i el que falta és fer-ho.
+     Va aquí i no al peu perquè és el que el lector necessita saber abans
+     de llegir res, no després. ────────────────────────────────────────── -->
+<section class="banda b-lli" id="onsom">
+  <div class="wrap center">
+    <p class="kicker">El calendari</p>
+    <p class="cita serif" style="margin-top:20px">La primera col·lecció <br>es confecciona entre
+      la tardor <br>i la primavera.</p>
+    <p class="lede centrat" style="margin-top:24px">Les formes, els colors i les mides ja estan
+      decidits. El que ve ara és el temps de taller: el teixit, els patrons i les primeres peces
+      fetes amb les mans. <b>L’estiu del 2027 seran a la costa d’on han sortit.</b></p>
+    <p class="lede centrat" style="margin-top:18px">No anirem més de pressa. Una camisa que ha
+      de durar deu estius no es fa en tres mesos, i el primer valor d’aquesta casa és la
+      lentitud.</p>
+    <p class="mini" style="margin-top:36px"><a href="#carta">Seguir-ho de prop →</a></p>
+  </div>
+</section>
+
 <section class="banda b-sal" id="hora">
   <div class="wrap center">
     <p class="kicker">El que fem</p>
     <h2 class="serif s8 manifest-t">Hi ha una hora, cada dia,<br>
-      en què el Mediterrani<br>es torna un altre lloc.</h2>
+      en què el Mediterrani <br>es torna un altre lloc.</h2>
     <p class="lede">Comença quan la llum deixa de caure a plom i s’acaba quan el cel deixa de fer
       de llum. Dura entre setanta i noranta minuts i canvia cada dia. D’aquesta hora en surt tot:
       el nom, els colors, la manera de fotografiar i el criteri per triar un teixit.
@@ -169,7 +212,7 @@
 <section class="banda b-lli" id="meitats">
   <div class="wrap center">
     <p class="kicker">La doble vida</p>
-    <h2 class="serif s7 manifest-t">El dia té dues meitats.<br>La roba ha de ser a totes dues.</h2>
+    <h2 class="serif s7 manifest-t">El dia té dues meitats. <br>La roba ha de ser a totes dues.</h2>
     <p class="lede">S’horabaixa no és una franja horària: és cap on va tot el dia. Per això no fem
       roba <em>per a</em> l’última hora de llum. <em class="ac">Fem roba que hi arribi.</em></p>
   </div>
@@ -213,7 +256,7 @@
   <div class="banda b-llum relat-cap">
     <div class="wrap center">
       <p class="kicker">Set capítols</p>
-      <h2 class="serif s8 manifest-t">Un horabaixa,<br>de cap a cap</h2>
+      <h2 class="serif s8 manifest-t">Un horabaixa, <br>de cap a cap</h2>
       <p class="lede">Set moments d’un mateix vespre, en l’ordre en què passen. Cap no està posat:
         tots van passar, i la roba que fem existeix per acompanyar-los.
         <em class="ac">Cada imatge porta els minuts que li falten al sol</em>, perquè aquí el
@@ -302,15 +345,40 @@
 <section class="banda b-nit" id="carta">
   <div class="wrap center">
     <p class="kicker">La carta</p>
-    <p class="cita">L’estiu s’acaba.<br>L’any que ve neix una marca.</p>
-    <p class="lede clar" style="margin-top:26px">Una carta cada divendres a l’hora de la posta,
-      amb els minuts exactes que li falten al sol. Res més.</p>
+    <p class="cita">L’estiu s’acaba. <br>L’any que ve neix una marca.</p>
+    <p class="lede clar" style="margin-top:26px">No escrivim cada setmana: escrivim quan hi ha
+      alguna cosa a dir. Un teixit que ha passat les proves, un color mesurat d’un vespre
+      concret, la primera peça sortint del taller. <b>Els que hi són ho sabran primer</b> —i
+      seran els primers a triar talla i color.</p>
     <form class="form" id="mail">
       <label class="oculta" for="correu">El teu correu</label>
       <input id="correu" type="email" placeholder="el teu correu" required>
       <button type="submit">Rebre-la</button>
     </form>
     <p class="mini clar" id="mailOk"></p>
+  </div>
+</section>
+
+<!-- ═══ 9 · ON PASSEN LES COSES · la sortida ══════════════════════════
+     Aquest web és un document: es llegeix un cop i s'entén. El que passa
+     cada dia passa a Instagram, i per tant l'última cosa que ha de veure
+     algú que se'n va no és un peu de pàgina: és on continuar. ────────── -->
+<section class="banda b-vespre" id="viu">
+  <div class="wrap center">
+    <p class="kicker">On passen les coses</p>
+    <h2 class="serif s7 clar" style="margin-top:20px">Això s’acaba aquí. <br>Allà continua
+      cada tarda.</h2>
+    <p class="lede clar centrat" style="margin-top:26px">Aquesta pàgina explica què som i no
+      canviarà gaire. El que canvia cada dia és la llum, i això és a Instagram: la costa a
+      l’hora que li toca, els minuts exactes que li falten al sol, i el que anem trobant pel
+      camí —un teixit, un color mesurat, una tempesta d’agost.</p>
+    <p class="lede clar centrat" style="margin-top:18px"><b>Els tres colors del 2027 sortiran
+      d’algun d’aquests vespres</b> —i encara no sabem de quin. Es mesuren d’una fotografia
+      concreta, amb el seu lloc i el seu minut, i qui hi és els veu abans que existeixin.</p>
+    <div class="ig-sortida">
+      <a class="btn clar" href="https://instagram.com/s_horabaixa" rel="me">@s_horabaixa →</a>
+      <p class="stamp ig-peu">Una fotografia al vespre · Cada una amb el seu lloc i el seu minut</p>
+    </div>
   </div>
 </section>
 
@@ -331,11 +399,13 @@
         <li><a href="lhora.html">L’hora</a></li></ul></div>
       <div><h4>Saber</h4><ul>
         <li><a href="manifest.html">El manifest</a></li><li><a href="marca.html">La marca</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
         <li><a href="pacte.html">El pacte</a></li><li><a href="pacte.html#certificat">El certificat</a></li>
         <li><a href="marca.html#paleta">El color</a></li><li><a href="marca.html#veu">La veu</a></li></ul></div>
       <div><h4>Escriure</h4><ul>
         <li><a href="#carta">La carta</a></li>
         <li><a href="https://instagram.com/s_horabaixa" rel="me">@s_horabaixa</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
         <li><a href="mailto:hola@shorabaixa.com">hola@shorabaixa.com</a></li></ul></div>
       <div><h4>Legal</h4><ul>
         <li><a href="legal.html">Avís legal</a></li>
@@ -344,7 +414,7 @@
     <div class="fbaix stamp">
       <span>S’Horabaixa · Costa Brava</span>
       <span>Fotografia pròpia · lloc, dia i minuts fins a la posta</span>
-      <span>Maqueta · 2026</span>
+      <span>© 2026</span>
     </div>
   </div>
 </footer>

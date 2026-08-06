@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacte — S’Horabaixa</title>
+<meta name="description" content="Escriu a hola@shorabaixa.com. No hi ha formulari ni resposta automàtica: hi ha una adreça i algú que la mira cada dia.">
+<meta name="theme-color" content="#F5F1E9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://shorabaixa.com/contacte.html">
+
+<!-- Com es veu aquest enllaç quan algú l'enganxa a un missatge. Sense això
+     surt l'adreça pelada, que per a una marca que ven una imatge és el pitjor
+     que li pot passar en el moment en què més es comparteix. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S’Horabaixa">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:url" content="https://shorabaixa.com/contacte.html">
+<meta property="og:title" content="Contacte — S’Horabaixa">
+<meta property="og:description" content="Escriu a hola@shorabaixa.com. Contesta una persona, i normalment el mateix dia.">
+<meta property="og:image" content="https://shorabaixa.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cap Roig, Calonge i Sant Antoni, sis minuts abans de la posta">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="carregat">
+
+<div id="progres" aria-hidden="true"><span></span></div>
+
+<header id="cap" class="fosc">
+  <!-- La franja d'estat. Va dins de la capçalera i no a fora: la capçalera
+       és sticky, i una franja germana seva se n'aniria amunt en baixar.
+       Aquí s'hi enganxa i n'hereta la inversió de color. -->
+  <div class="franja">
+    <div class="franja-c">
+      <p class="franja-t">Properament<span class="franja-p">·</span>Estiu del 2027</p>
+      <p class="franja-m"><span class="franja-l">Més informació:</span>
+        <a href="mailto:hola@shorabaixa.com?subject=S%E2%80%99Horabaixa">hola@shorabaixa.com</a></p>
+    </div>
+  </div>
+  <div class="nav">
+    <a class="marca" href="index.html" aria-label="S’Horabaixa, inici">
+      <svg width="34" height="15" viewBox="0 0 74 30" aria-hidden="true">
+        <path d="M19 21 A18 18 0 0 1 55 21" fill="currentColor"/>
+        <rect x="4" y="21" width="66" height="1.7" fill="currentColor"/></svg>
+      <span class="wm">S’HORABAIXA</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="manifest.html">Manifest</a></li>
+      <li><a href="index.html#relat">El relat</a></li>
+      <li><a href="territori.html">El territori</a></li>
+      <li><a href="cataleg.html">Catàleg</a></li>
+      <li><a href="pacte.html">El pacte</a></li>
+      <li><a href="vivim.html">Com vivim</a></li>
+      <li><a href="marca.html">La marca</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
+    </ul></nav>
+    <button class="menu-b" id="obreMenu" aria-expanded="false" aria-controls="menu">
+      <span class="mb-l" aria-hidden="true"></span><span class="oculta">Menú</span></button>
+  </div>
+</header>
+
+<!-- El menú de mà. No és un calaix que llisca de costat: puja de sota
+     l’horitzó, com el símbol al revés. -->
+<div id="menu" class="menu" hidden>
+  <div class="menu-cos">
+    <p class="kicker clar menu-k">On vols anar</p>
+    <nav aria-label="Menú"><ul id="menuLlista"></ul></nav>
+    <p class="stamp menu-ara" id="menuAra"></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ CAPÇALERA ═════════════════════════════════════════════════════ -->
+<section class="pag-cap">
+  <div class="wrap">
+    <p class="kicker clar">Contacte</p>
+    <h1 class="serif">Escriu-nos. <br>Contesta una persona.</h1>
+    <p class="lede">No hi ha formulari amb desplegables, ni número de tiquet, ni resposta
+      automàtica que digui que la teva consulta és important. Hi ha <b>una adreça</b> i algú
+      que la mira cada dia. Si escrius al matí, sol contestar-se abans que es pongui el sol.</p>
+  </div>
+</section>
+
+<!-- ═══ L'ADREÇA ══════════════════════════════════════════════════════ -->
+<section class="banda sal">
+  <div class="wrap center">
+    <p class="kicker">L’adreça</p>
+    <p class="cita serif" style="margin-top:18px"><a href="mailto:hola@shorabaixa.com"
+      class="ct-mail">hola@shorabaixa.com</a></p>
+    <p class="mini centrat" style="margin-top:26px;max-width:56ch;margin-left:auto;margin-right:auto">
+      És l’única. No en tenim cap de comercial, cap d’incidències i cap de premsa: totes
+      anirien al mateix lloc, que és aquí.</p>
+  </div>
+</section>
+
+<!-- ═══ QUÈ ENS POTS DIR ══════════════════════════════════════════════ -->
+<section class="banda lli">
+  <div class="wrap">
+    <p class="kicker">Què ens pots dir</p>
+    <h2 class="serif mitja" style="margin-top:20px">Quatre motius, <br>i tots ens interessen</h2>
+    <div class="tres quatre" style="margin-top:60px">
+      <div>
+        <span class="num">01</span>
+        <h3>Vols ser dels primers</h3>
+        <p>Digues-ho i prou. La primera producció és curta i numerada, i qui hi és tria talla i
+          color quan encara hi són totes. <a href="index.html#carta">També pots entrar a la
+          carta</a>, que és el mateix sense haver d’escriure res.</p>
+      </div>
+      <div>
+        <span class="num">02</span>
+        <h3>Fas teixit, patró o taller</h3>
+        <p><b>És la conversa que més ens interessa ara mateix.</b> Busquem lli europeu, punt
+          de bany reciclat i mans a menys de noranta minuts de la costa que fotografiem. Tenim
+          les fitxes tècniques fetes i sabem què demanem: si ets d’aquí o hi treballes, la
+          conversa serà curta i concreta.</p>
+      </div>
+      <div>
+        <span class="num">03</span>
+        <h3>En vols escriure</h3>
+        <p>Tenim l’arxiu documentat —lloc, dia i minut de cada fotografia— i no ens fa res
+          ensenyar-lo, ni els números, ni el que encara no funciona. No enviem notes de premsa.
+          Enviem el que preguntis.</p>
+      </div>
+      <div>
+        <span class="num">04</span>
+        <h3>Ens vols assenyalar una cosa</h3>
+        <p>El manifest i els codis són públics perquè es puguin fer servir en contra nostra.
+          Si trobes una contradicció, una dada que no quadra o una promesa que no complim,
+          <b>dir-nos-ho és fer-nos un favor</b> i el contestarem igual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EL QUE PODEM PROMETRE ═════════════════════════════════════════ -->
+<section class="banda vespre">
+  <div class="wrap">
+    <p class="kicker clar">El que sí que et podem prometre</p>
+    <h2 class="serif mitja clar" style="margin-top:20px">Tres coses, <br>i són petites</h2>
+    <ul class="pc-llista" style="margin-top:50px">
+      <li><i>i</i><span>Contesta una persona i no una plantilla. Si la resposta és «encara no
+        ho sabem», serà això exactament.</span></li>
+      <li><i>ii</i><span>La teva adreça no entra en cap llista si no ho demanes, i no la
+        cedim a ningú. <a href="privacitat.html">Aquí hi ha què en fem</a>.</span></li>
+      <li><i>iii</i><span>Si ens preguntes una xifra que tenim, te la donem. Si no la tenim,
+        ho diem en lloc d’inventar-la.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ TANCAMENT ═════════════════════════════════════════════════════ -->
+<section class="banda tinta">
+  <div class="wrap center">
+    <p class="kicker clar">Per què t’ho posem tan fàcil</p>
+    <p class="cita serif">Una marca que no <br>es deixa <em class="rosa">preguntar</em><br>
+      no es pot comprovar.</p>
+    <p class="lede clar centrat">I tot això —els minuts, els llocs, els colors mesurats— només
+      val alguna cosa si algú pot venir i demanar-ne comptes. Aquesta adreça és la porta.</p>
+    <p class="mini clar" style="margin-top:44px">
+      <a href="mailto:hola@shorabaixa.com">hola@shorabaixa.com →</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbaix stamp" style="margin-top:0;border:0;padding-top:0">
+      <span><a href="index.html">← Tornar a la portada</a></span>
+      <span><a href="index.html#carta">La carta →</a></span>
+      <span>S’Horabaixa · Costa Brava</span>
+      <span><a href="privacitat.html">Privacitat</a> · <a href="legal.html">Avís legal</a></span>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="js/variants.js"></script>
+<script src="js/dades.js"></script>
+<script src="js/web.js"></script>
+</body>
+</html>
