@@ -877,6 +877,7 @@ function obreFitxa(id) {
   if (p.nota) notes.push(p.nota);
   $('#fNota').innerHTML = notes.join('<br><br>');
   $('#fNota').style.display = notes.length ? 'block' : 'none';
+  actualitzaEscriu();
   $('#fitxa').classList.add('obert');
   document.body.style.overflow = 'hidden';
 }
@@ -1037,46 +1038,36 @@ document.addEventListener('keydown', function (e) {
   }
 })();
 
-/* ── LA CISTELLA ─────────────────────────────────────────────────────── */
-var cistella = [];
-function pintaCistella() {
-  var c = $('#calaixItems'); if (!c) return;
-  c.innerHTML = '';
-  if (!cistella.length) c.appendChild(el('p', 'calaix-buida', 'Encara no hi ha res.'));
-  cistella.forEach(function (it, i) {
-    var n = el('div', 'ci');
-    n.innerHTML = '<img src="' + it.im + '" alt=""><div><div class="n">' + it.nom +
-      '</div><div class="t">talla ' + it.t + (it.c ? ' · ' + it.c : '') + '</div></div>' +
-      '<div class="p">' + it.preu + ' €<span class="x">×</span></div>';
-    $('.x', n).onclick = function () { cistella.splice(i, 1); pintaCistella(); };
-    c.appendChild(n);
-  });
-  $('#numCistella').textContent = cistella.length;
-  $('#calaixTotal').textContent = cistella.reduce(function (a, b) { return a + b.preu; }, 0) + ' €';
+/* ── PROPERAMENT ──────────────────────────────────────────────────────
+   Aquí hi havia una cistella amb total en euros i un botó de reservar.
+   Amb el web obert al domini propi allò prometia una compra que no
+   existeix: no hi ha peça, no hi ha estoc i no hi ha cobrament. La
+   cistella es guarda sencera a _ARXIU/RESERVA_CATALEG_2026-08-06/ i
+   tornarà el dia que hi hagi producte i passarel·la.
+   Mentrestant l'única acció possible és escriure'ns, i el correu ja surt
+   amb el nom de la peça posat: és l'única dada que ens interessa. */
+function actualitzaEscriu() {
+  var fe = $('#fEscriu');
+  if (!fe || !actual) return;
+  fe.href = 'mailto:hola@shorabaixa.com' +
+    '?subject=' + encodeURIComponent('Interès per ' + actual.nom) +
+    '&body=' + encodeURIComponent(
+      'Hola,\n\nHe vist ' + actual.nom + ' al catàleg i en voldria saber més.\n\n');
 }
-var fa = $('#fAfegir');
-if (fa) fa.onclick = function () {
-  if (!actual) return;
-  cistella.push({ id: actual.id, nom: actual.nom, preu: actual.preu, im: actual.im, t: talla,
-                  c: colorTriat ? colorTriat.nom : null });
-  pintaCistella();
-  $('#fitxa').classList.remove('obert');
-  $('#calaix').classList.add('obert');
-};
-var oc = $('#obreCistella');
-if (oc) oc.onclick = function () { $('#calaix').classList.add('obert'); document.body.style.overflow = 'hidden'; };
-$$('[data-tancac]').forEach(function (b) {
-  b.onclick = function () { $('#calaix').classList.remove('obert'); document.body.style.overflow = ''; };
-});
-pintaCistella();
 
 /* ── LA CARTA ────────────────────────────────────────────────────────── */
+/* El formulari deia «Apuntat» i llençava el correu: un web estàtic no pot
+   guardar res enlloc. Fins que hi hagi servei de llista, obre el correu del
+   visitant amb el missatge escrit. El que s'envia, s'envia de debò. */
 var mf = $('#mail');
 if (mf) mf.onsubmit = function (e) {
   e.preventDefault();
-  var a = ara();
-  $('#mailOk').textContent = 'Apuntat. La primera carta surt divendres a les ' + hhmm(a.posta) + '.';
-  mf.reset();
+  var c = ($('#correu') && $('#correu').value || '').trim();
+  window.location.href = 'mailto:hola@shorabaixa.com' +
+    '?subject=' + encodeURIComponent('La carta') +
+    '&body=' + encodeURIComponent('Hola,\n\nApunteu-me a la carta' +
+      (c ? ' en aquesta adreça: ' + c : '') + '.\n\n');
+  $('#mailOk').textContent = 'S’obre el teu correu amb el missatge escrit. Envia’l i ja està.';
 };
 
 /* ── PROGRÉS I CAPÇALERA ─────────────────────────────────────────────── */

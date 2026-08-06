@@ -349,7 +349,9 @@ header nav a:hover{border-bottom-color:currentColor}
 .form button{border:1px solid var(--sal);background:var(--sal);color:var(--vespre);
   padding:16px 30px;font-size:var(--t2);letter-spacing:.22em;text-transform:uppercase}
 footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
-.fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:calc(var(--gut)*2)}
+/* Cinc columnes des que hi ha la de Legal: el logotip i el claim ocupen
+   el doble i les quatre llistes van a parts iguals. */
+.fcols{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:calc(var(--gut)*1.5)}
 .peu-claim{font-size:var(--t5);color:var(--sal);line-height:1.45;margin-top:16px}
 .fcols h4{font-size:var(--t1);letter-spacing:.22em;text-transform:uppercase;color:var(--rocagraf);
   margin-bottom:16px;font-weight:600}
@@ -367,6 +369,11 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
   .portes{grid-template-columns:repeat(2,1fr)}
   .pc{grid-template-columns:1fr;gap:40px}
   .r-c{grid-template-columns:1fr;gap:34px;align-items:start}
+  /* Cinc columnes de peu no hi caben en una pantalla intermèdia: el bloc
+     del logotip passa a ocupar la fila sencera i les quatre llistes en fan
+     una de sola a sota. */
+  .fcols{grid-template-columns:repeat(4,1fr);gap:calc(var(--gut)*1.4)}
+  .fcols>div:first-child{grid-column:1/-1;margin-bottom:14px}
 }
 @media(max-width:860px){
   :root{--gut:20px}
@@ -1276,3 +1283,17 @@ h1.clar,h2.clar,h3.clar,.serif.clar{color:var(--i1)}
   padding-left:22px;margin-bottom:11px}
 .legal li:before{content:"—";position:absolute;left:0;color:var(--rosa)}
 .legal b{color:var(--vespre);font-weight:600}
+
+/* ── Properament · el lloc on hi havia el botó de reservar ─────────────
+   No és un botó desactivat: un botó gris convida a prémer-lo i decep. És
+   un avís, amb la seva pròpia forma, i l'única acció que hi ha és un
+   enllaç de text cap al correu.
+──────────────────────────────────────────────────────────────────────── */
+.properament{border:1px solid var(--sorra);background:rgba(230,220,199,.34);
+  padding:18px 20px;margin:26px 0 30px;border-radius:2px}
+.prop-t{font-size:var(--t3);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--vespre);margin:0 0 8px}
+.prop-d{font-size:var(--t3);line-height:1.65;color:#4a4a48;margin:0}
+.prop-d a{color:var(--vespre);text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:3px}
+.prop-d a:hover{text-decoration-color:var(--rosa)}
