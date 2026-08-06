@@ -685,10 +685,12 @@ img,video,svg{max-width:100%}
    d'un paràgraf, en canvi, un enllaç sense subratllat és un enllaç que
    ningú no veurà. Subratllat fi, separat de la línia de base.
 ──────────────────────────────────────────────────────────────────────── */
-.lede a,.mini a,.cx p a,.pactes p a,.cic p a,.tres p a,.mc-t a,.codi p a{
+.lede a,.mini a,.cx p a,.pactes p a,.cic p a,.tres p a,.mc-t a,.codi p a,
+.legal p a,.legal li a{
   text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .lede a:hover,.mini a:hover,.cx p a:hover,.pactes p a:hover,.cic p a:hover,
-.tres p a:hover,.mc-t a:hover,.codi p a:hover{text-decoration-color:var(--rosa)}
+.tres p a:hover,.mc-t a:hover,.codi p a:hover,
+.legal p a:hover,.legal li a:hover{text-decoration-color:var(--rosa)}
 
 /* ── El manifest · nou línies, res més ─────────────────────────────── */
 .manifest-llista{list-style:none;margin:0;padding:0;max-width:760px}
@@ -1257,3 +1259,20 @@ h1.clar,h2.clar,h3.clar,.serif.clar{color:var(--i1)}
    passar-hi per sobre puja al to de segell. */
 .silenci figcaption{color:var(--i4);z-index:3}
 .silenci:hover figcaption{color:var(--i3)}
+
+/* ── Pàgines legals · avís legal i privacitat ──────────────────────────
+   Text llarg i seguit, que no n'hi ha enlloc més del lloc: la resta de
+   pàgines són blocs curts amb molt d'aire. Aquí es busca el contrari,
+   llegibilitat de document: mesura estreta, interlineat ample i els
+   titulars separats de debò del text que els segueix.
+   Els enllaços van al costat, a la regla d'enllaços dins del text.
+──────────────────────────────────────────────────────────────────────── */
+.legal{max-width:68ch}
+.legal h2{font-size:var(--t6);margin:58px 0 18px;color:var(--vespre);line-height:1.15}
+.legal h2:first-child{margin-top:0}
+.legal p{font-size:var(--t4);line-height:1.75;color:#3a3a38;margin-bottom:18px}
+.legal ul{list-style:none;margin:0 0 22px;padding:0}
+.legal li{position:relative;font-size:var(--t4);line-height:1.7;color:#3a3a38;
+  padding-left:22px;margin-bottom:11px}
+.legal li:before{content:"—";position:absolute;left:0;color:var(--rosa)}
+.legal b{color:var(--vespre);font-weight:600}
