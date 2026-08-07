@@ -237,10 +237,40 @@ header nav a:hover{border-bottom-color:currentColor}
 .hero{position:relative;background:var(--sal)}
 .hero-im,.hero-im img{display:block;width:100%}
 .hero-im img{height:auto}
+/* ── EL TEXT DEL HERO I LA ROCA ─────────────────────────────────────────
+   El bloc de text s'anava a sobre de l'illot. Mesurat al botó «Entra al
+   moment», que és l'element més baix i per tant el que cau on la roca és
+   més ampla:
+
+            900px   1100px  1280px  1440px  1700px
+     abans   −177     −155     −64      +3      −3      (negatiu = a sobre)
+     ara      +61     +107    +129    +120     +94
+
+   A 1440 només es tocaven; a 900 i 1100 el botó era **damunt de la roca**.
+   El motiu que no es veia a l'escriptori gran: la fotografia del hero és
+   2:1, o sigui que **com més estreta la finestra, més avall cau el botó dins
+   de la imatge** —i allà la roca és molt més ampla—. A 900 px el botó queia
+   al 84% de l'alçada de la foto; a 1440, al 63%.
+
+   Per això calen dues coses i no una:
+   · el bloc s'estreny (de 42%/540 a 34%/450) i puja una mica → a partir de
+     1280 el text se separa de la roca i queda aire de veritat;
+   · i **sota de 1280 la fotografia es retalla més alta** (62vw en comptes de
+     2:1). No és per estètica: puja el botó cap a la part estreta de la roca.
+
+   El bloc segueix alineat a la dreta amb el contenidor de 1280 —la mateixa
+   reixa que la resta de la pàgina—, o sigui que no es trenca cap alineació.
+   Es va estrènyer en comptes de desplaçar-lo per això mateix: desplaçar-lo
+   hauria menjat el marge dret i el hero hauria deixat de quadrar amb les
+   altres seccions.
+──────────────────────────────────────────────────────────────────────── */
 .hero-cont{position:absolute;inset:0;max-width:var(--max);margin:0 auto;
-  padding:clamp(34px,7.5%,104px) calc(var(--gut)*1.6) 0;
+  padding:clamp(28px,5%,80px) calc(var(--gut)*1.6) 0;
   display:flex;align-items:flex-start;justify-content:flex-end}
-.hero-tx{width:min(42%,540px);color:var(--vespre)}
+.hero-tx{width:min(34%,450px);color:var(--vespre)}
+@media(min-width:861px) and (max-width:1279px){
+  .hero-im img{height:62vw;max-height:660px;object-fit:cover;object-position:50% 42%}
+}
 .hero-kick{font-size:var(--t2);letter-spacing:.3em;text-transform:uppercase;
   color:rgba(34,56,78,.68);margin-bottom:clamp(12px,2vw,20px)}
 .hero h1{font-size:var(--t7);color:var(--vespre);line-height:1.04}
@@ -438,6 +468,31 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
      desbordament horitzontal però **no crea contenidor de desplaçament**, i
      per tant el sticky segueix funcionant. */
   html,body{overflow-x:clip}
+
+  /* ── AL MÒBIL S'ENGANXA NOMÉS LA NAVEGACIÓ, NO LA FRANJA ────────────────
+     La capçalera fa 107 px: 28 de franja d'avís i 78 de navegació. En un
+     telèfon de 390×844 això és el **12,7% de la pantalla ocupat sempre**, i
+     en un de 360×780, el 13,7%. Una barra de navegació mòbil normal en fa
+     44–56: aquesta feia el doble, i en un lloc que és una lectura llarga on
+     la fotografia és el patrimoni, es nota.
+
+     La franja —«Properament · Estiu del 2027» i el correu— **és un avís, no
+     navegació**: es llegeix una vegada. Els 78 px del nav sí que serveixen
+     sempre, perquè hi ha set entrades darrere d'un botó de menú.
+
+     El truc: la capçalera s'enganxa a una alçada NEGATIVA igual a la franja.
+     Així la franja puja i se'n va, i el nav queda clavat a dalt de tot. Es fa
+     amb `top` i no traient la franja de la capçalera perquè **ha de continuar
+     dins**: n'hereta la inversió de color i el fons que hi pinta el JS.
+
+     ⚠ Si algun dia canvia el cos o el buit de la franja, aquest número s'ha
+     de tornar a mesurar. Avui són 28 px i és constant de 360 a 860.
+
+     El que NO es fa és la capçalera que s'amaga en baixar i torna en pujar:
+     xoca amb la regla del manual —«el moviment només serveix per explicar el
+     pas del temps, mai per decorar»—. */
+  :root{--franja-h:28px}
+  header{top:calc(-1 * var(--franja-h))}
   img,video,svg{max-width:100%}
   h1,h2,h3,p,span,b{overflow-wrap:break-word}
   .nav{padding:15px 20px;gap:14px}
@@ -666,6 +721,31 @@ html{scroll-behavior:auto}
      desbordament horitzontal però **no crea contenidor de desplaçament**, i
      per tant el sticky segueix funcionant. */
   html,body{overflow-x:clip}
+
+  /* ── AL MÒBIL S'ENGANXA NOMÉS LA NAVEGACIÓ, NO LA FRANJA ────────────────
+     La capçalera fa 107 px: 28 de franja d'avís i 78 de navegació. En un
+     telèfon de 390×844 això és el **12,7% de la pantalla ocupat sempre**, i
+     en un de 360×780, el 13,7%. Una barra de navegació mòbil normal en fa
+     44–56: aquesta feia el doble, i en un lloc que és una lectura llarga on
+     la fotografia és el patrimoni, es nota.
+
+     La franja —«Properament · Estiu del 2027» i el correu— **és un avís, no
+     navegació**: es llegeix una vegada. Els 78 px del nav sí que serveixen
+     sempre, perquè hi ha set entrades darrere d'un botó de menú.
+
+     El truc: la capçalera s'enganxa a una alçada NEGATIVA igual a la franja.
+     Així la franja puja i se'n va, i el nav queda clavat a dalt de tot. Es fa
+     amb `top` i no traient la franja de la capçalera perquè **ha de continuar
+     dins**: n'hereta la inversió de color i el fons que hi pinta el JS.
+
+     ⚠ Si algun dia canvia el cos o el buit de la franja, aquest número s'ha
+     de tornar a mesurar. Avui són 28 px i és constant de 360 a 860.
+
+     El que NO es fa és la capçalera que s'amaga en baixar i torna en pujar:
+     xoca amb la regla del manual —«el moviment només serveix per explicar el
+     pas del temps, mai per decorar»—. */
+  :root{--franja-h:28px}
+  header{top:calc(-1 * var(--franja-h))}
 img,video,svg{max-width:100%}
 .terr{grid-template-columns:1fr;gap:44px}
 .tres{gap:40px;margin-top:50px}
