@@ -731,7 +731,13 @@ img,video,svg{max-width:100%}
 .codi h3{font-family:var(--d);font-weight:400;font-size:var(--t6);color:var(--sal);margin-bottom:12px}
 .codi p{font-size:var(--t3);line-height:1.7;color:rgba(245,241,233,.76)}
 .filtres-llista{list-style:none;margin-top:48px}
-.filtres-llista li{display:grid;grid-template-columns:56px 1fr 1.3fr;gap:calc(var(--gut)*1.4);
+/* La primera columna era FIXA a 56 px perquè es va fer per a llistes numerades
+   («01», «02», «03»). Però el catàleg §07 hi posa paraules —«Primer»,
+   «Després», «I llavors»— i «I llavors» en fa 76: el rètol sortia de la seva
+   columna i s'encavalcava amb el títol. Amb minmax() els números segueixen
+   exactament on eren i només s'eixampla la columna quan el rètol ho demana. */
+.filtres-llista li{display:grid;grid-template-columns:minmax(56px,max-content) 1fr 1.3fr;
+  gap:calc(var(--gut)*1.4);
   align-items:baseline;padding:26px 0;border-top:1px solid var(--sorra)}
 .fm-n{color:var(--sorra)}
 .filtres-llista span{font-size:var(--t3);line-height:1.7;color:#4a4a48}
@@ -788,7 +794,7 @@ img,video,svg{max-width:100%}
 .moments,.veu{grid-template-columns:1fr}
 .mom.ample{grid-column:span 1}
 .mom.ample .mom-im{aspect-ratio:4/5}
-.filtres-llista li{grid-template-columns:38px 1fr;gap:10px 14px}
+.filtres-llista li{grid-template-columns:minmax(38px,max-content) 1fr;gap:10px 14px}
 .filtres-llista span{grid-column:2}
 /* El títol també ha d'anar a la columna 2. Sense això queda dins dels 38 px
    del número i es parteix lletra a lletra —«L'hor / a»—. Passava des del
@@ -1216,7 +1222,13 @@ footer{padding:56px 0 40px}
 .pa-frase{color:var(--ambre-tx);display:inline-block;margin-top:3px}
 .banda.llum.nocturn .pa-frase{color:var(--rosa)}
 .desap{background:var(--horablava);color:var(--sal);padding:110px 0 96px}
-.ds-cap{max-width:24ch}
+/* Deia `max-width:24ch`, i la unitat `ch` es resol contra la font DEL
+   CONTENIDOR —la Jost de 17 px, o sigui uns 232 px— quan el titular que hi
+   viu és Bodoni Moda a 82 px, que en demana 392. El bloc es quedava a la
+   meitat i «és la que desapareix» sortia per la dreta. El titular ja porta
+   els seus salts de línia escrits a mà: no necessita que ningú l'estrenyi,
+   només que el contenidor tingui la mida del que hi ha dins. */
+.ds-cap{width:max-content;max-width:100%}
 .ds-fig{margin:64px 0 56px;position:relative}
 .ds-fig img{width:100%;max-height:64vh;object-fit:cover;object-position:50% 42%}
 .ds-fig figcaption{position:absolute;right:calc(var(--gut)*1.6);bottom:16px;
