@@ -194,11 +194,11 @@ const PRODUCTES = [
     cura:'Renta-la a mà i estén-la a l\u2019ombra. Les arrugues formen part.',
     seg:'Port Bo, Calella de Palafrugell · 13.09.2024 · 18:39 · 41,8886 N 3,1848 E' },
 
-  { id:'bany', nom:'Camisa de Bany', cat:'unisex', tipus:'Camisa', preu:135,
+  { id:'dues', nom:'Camisa de les Dues', cat:'unisex', tipus:'Camisa', preu:135,
     im:'img/IA_camisabany.jpg', imTipus:'producte', etq:'Fons', hora:'11:00 → 21:00',
     dv:'Gasa de cotó doble, ampla i de mànega tres quarts. Es porta damunt del banyador o ' +
        'directament damunt de la pell, i es comparteix.',
-    perque:'És la que et poses moll, abans d’eixugar-te. Gasa doble i mànega tres quarts: tapa sense enganxar-se i s’asseca a sobre teu.',
+    perque:'Les dues és quan surts de l\u2019aigua i vols anar tapat sense anar vestit. Gasa doble i m\u00e0nega tres quarts: te la poses molla i s\u2019asseca a sobre teu.',
     fitxa:{'Fibra':'Cotó orgànic GOTS','Gramatge':'130 g/m²','Teixit a':'Europa · per tancar','Cosit a':'Catalunya o Portugal · per tancar',
            'Acabat':'Gasa doble arrugada','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -354,7 +354,7 @@ const LLOCS = [
     quan:'9 de setembre · 19:06', min:'−61 min', im:'img/TUN_barques.jpg', nivell:'lloc',
     tx:'Cases blanques al voltant d’una cala, i barques a l’aigua encara. La postal existeix; '+
        'el que no existeix és la pressa.',
-    peca:'Camisa de Bany', pid:'bany' },
+    peca:'Camisa de les Dues', pid:'dues' },
 
   { nom:'Aigua Xelida', mun:'Palafrugell', coord:'41,9222 N · 3,2172 E',
     quan:'17 de maig · 18:47', min:'−135 min', im:'img/DIA_xelida.jpg', nivell:'lloc',
