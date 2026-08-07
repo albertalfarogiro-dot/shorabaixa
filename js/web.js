@@ -425,7 +425,9 @@ function frase(a) {
       var g = document.getElementById('meridiana');
       if (g) {
         var f = (a.m - a.sortida) / Math.max(1, (a.posta + 60) - a.sortida);
-        g.style.left = (Math.max(0, Math.min(100, f * 100))).toFixed(2) + '%';
+        /* es reté mig punt a cada punta: l'etiqueta «ara» va centrada damunt
+           del marcador i, enganxada a la vora, es talla per la meitat. */
+        g.style.left = (Math.max(0.6, Math.min(99.4, f * 100))).toFixed(2) + '%';
       }
     }
   }

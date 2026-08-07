@@ -90,8 +90,12 @@
   </div>
 </section>
 
-<!-- ═══ EL RELLOTGE D’AVUI ════════════════════════════════════════════ -->
-<section class="banda llum">
+<!-- ═══ EL RELLOTGE D’AVUI ════════════════════════════════════════════
+     L'id="llums" no és decoratiu: és el que busca tic() a js/web.js per
+     tenyir aquesta franja amb el color del minut i canviar-ne la tinta. Sense
+     l'id, el color en directe no s'executa i la pàgina menteix.
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="banda llum" id="llums">
   <div class="wrap">
     <div class="cap-secc">
       <div>
@@ -106,6 +110,71 @@
         <p class="mini" id="postaAvui"></p>
       </div>
     </div>
+    <!-- La meridiana: el dia sencer de la sortida a la nit, amb el marcador
+         «ara» al minut real. El CSS hi era fet —gradient i tot, i fins i tot
+         les regles de nocturn— i no s'havia col·locat mai. -->
+    <div class="meridiana-linia"><i id="meridiana"></i></div>
+  </div>
+</section>
+
+<!-- ═══ PER QUÈ PASSA ════════════════════════════════════════════════
+     La pàgina afirmava que aquesta hora és rara i tot seguit la descrivia,
+     sense explicar mai el mecanisme. Aquesta secció omple aquell forat, i ho
+     fa amb una regla: la física només hi entra on justifica una decisió que
+     la marca ja havia pres. Res d'aquí no és nostre i es diu obertament.
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="banda vespre">
+  <div class="wrap">
+    <p class="kicker">Per què passa</p>
+    <h2 class="serif mitja" style="margin:20px 0 20px">Aquesta hora no és<br>una manera de dir</h2>
+    <p class="lede" style="max-width:66ch">Les cinc llums, els minuts i els colors amb data
+      surten d’una cosa que no hem descobert nosaltres i que es pot anar a comprovar a qualsevol
+      llibre d’òptica. <b>Aquesta part no és nostra: és per què funciona la nostra.</b></p>
+
+    <div class="codis-llista" style="margin-top:52px">
+      <div class="codi">
+        <span class="codi-n">01</span>
+        <h3>Per què es torna càlida</h3>
+        <p>Amb el sol arran d’horitzó, la llum ha de travessar molta més atmosfera que al migdia.
+          Pel camí es va quedant la part blava, i el que t’arriba ja ve escorat cap al taronja i
+          el vermell. <em class="ac">No és un filtre: és el gruix de l’aire.</em></p>
+      </div>
+      <div class="codi">
+        <span class="codi-n">02</span>
+        <h3>Per què no és foscor</h3>
+        <p>A l’hora blava el sol ja és sota l’horitzó, però encara il·lumina l’atmosfera de dalt,
+          i és aquesta la que et fa de llum a tu. Per això la Blava 20:49 existeix vint-i-dos
+          minuts després d’una posta: <em class="ac">no és el que queda del dia, és una altra
+          llum.</em></p>
+      </div>
+      <div class="codi">
+        <span class="codi-n">03</span>
+        <h3>Per què dura tan poc</h3>
+        <p>Prop de l’horitzó, cada grau que baixa el sol canvia el color molt més que a mig cel.
+          D’aquí surten els vint-i-cinc minuts de l’hora màgica, i no dues hores.
+          <em class="ac">El rellotge no el posem nosaltres.</em></p>
+      </div>
+    </div>
+
+    <p class="nota" style="margin-top:52px;max-width:66ch">I una quarta cosa, que ja no va del cel
+      sinó de la roba: a aquesta hora la llum ve <b>de costat i rasant</b>. Allarga les ombres i
+      entra dins la trama, de manera que un lli s’hi veu pel que és i un teixit brillant hi fa un
+      reflex que no perdona. <b>Per això les nostres peces són mates.</b> No és una preferència
+      d’estil: és el que aguanta aquesta llum.</p>
+
+    <h2 class="serif mitja" style="margin:64px 0 20px">I per què no ens fiem<br>del que veiem</h2>
+    <p class="lede" style="max-width:66ch">Perquè l’ull s’adapta. Mentre mires, la vista va
+      reequilibrant sola què considera blanc, i t’amaga justament allò que ha canviat. A aquesta
+      hora, precisament, <b>l’ull humà és l’instrument menys fiable que tens a mà</b> —i el teu ho
+      està fent ara mateix, mentre llegeixes això.</p>
+    <p class="nota" style="max-width:66ch">És tota la raó per la qual els colors d’aquesta marca
+      <b>no es trien mirant-los</b>: es mesuren sobre la fotografia, es passen a CIELAB i és aquell
+      número, i no una impressió, el que va al tintorer. <em class="ac">El mètode no hi és per fer
+      bonic. Hi és perquè l’ull no serveix.</em></p>
+    <p class="nota" style="max-width:66ch;margin-top:36px">I si ho vols comprovar sense moure’t:
+      l’hora de posta que hi ha aquí dalt <b>no és una dada copiada d’enlloc</b>. Es calcula en
+      directe per a aquestes coordenades amb el mateix algorisme amb què es data cada fotografia
+      de l’arxiu. <em class="ac">Torna-hi demà i serà un altre minut.</em></p>
   </div>
 </section>
 

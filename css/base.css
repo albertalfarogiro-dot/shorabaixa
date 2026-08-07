@@ -1123,6 +1123,13 @@ footer{padding:56px 0 40px}
 .banda.llum.nocturn .llum-seg{color:rgba(245,241,233,.5)}
 .banda.llum.nocturn .llum-min{color:var(--rosa)}
 .banda.llum.nocturn .col-tit{color:rgba(245,241,233,.6);border-bottom-color:rgba(245,241,233,.2)}
+/* Aquestes tres faltaven i és el que impedia encendre el tenyit en directe: el
+   kicker, el lede i el peu del rellotge es queden en tinta fosca damunt d'un
+   fons que a partir de les nou ja és nit, i no es llegeixen. */
+.banda.llum.nocturn .kicker,
+.banda.llum.nocturn .mini{color:rgba(245,241,233,.58)}
+.banda.llum.nocturn .lede{color:rgba(245,241,233,.82)}
+.banda.llum.nocturn .mini b{color:var(--sal)}
 .meridiana-linia{position:relative;height:3px;margin:44px 0 0;border:0;
   background:linear-gradient(90deg,var(--sal),var(--llum) 22%,var(--or) 42%,
     var(--coral) 58%,var(--malva) 70%,var(--horablava) 82%,var(--tinta))}
