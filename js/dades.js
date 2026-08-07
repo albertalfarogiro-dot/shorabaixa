@@ -188,8 +188,8 @@ const PRODUCTES = [
     dv:'Coll cubà obert, sense passadors. Prou fina per portar-la damunt de la pell molla, ' +
        'prou seriosa per anar a sopar. Dos talls: recte i afuat.',
     perque:'Les vuit és l\u2019hora en què surts sense haver-te canviat.',
-    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'165 g/m²','Teixit a':'Guimarães, Portugal',
-           'Cosit a':'Mataró','Acabat':'Tenyit en peça','Talls':'Recte i afuat','Talles':'XS–XXL'},
+    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'165 g/m²','Teixit a':'Europa · per tancar',
+           'Cosit a':'Catalunya o Portugal · per tancar','Acabat':'Tenyit en peça','Talls':'Recte i afuat','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
     cura:'Renta-la a mà i estén-la a l\u2019ombra. Les arrugues formen part.',
     seg:'Port Bo, Calella de Palafrugell · 13.09.2024 · 18:39 · 41,8886 N 3,1848 E' },
@@ -199,7 +199,7 @@ const PRODUCTES = [
     dv:'Gasa de cotó doble, ampla i de mànega tres quarts. Es porta damunt del banyador o ' +
        'directament damunt de la pell, i es comparteix.',
     perque:'És la que et poses moll i que a mig camí ja no ho està.',
-    fitxa:{'Fibra':'Cotó orgànic GOTS','Gramatge':'130 g/m²','Teixit a':'Portugal','Cosit a':'Mataró',
+    fitxa:{'Fibra':'Cotó orgànic GOTS','Gramatge':'130 g/m²','Teixit a':'Europa · per tancar','Cosit a':'Catalunya o Portugal · per tancar',
            'Acabat':'Gasa doble arrugada','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
     cura:'Renta-la a 30° i no la planxis: el relleu és la peça.',
@@ -210,8 +210,8 @@ const PRODUCTES = [
     dv:'Ample, cordó pla de cotó i elàstic posterior dissimulat. Sense cremallera: vint-i-quatre ' +
        'segons per posar-te\u2019l i tot un vespre per treure-te\u2019l.',
     perque:'Del camí de ronda, que és el que separa la platja del sopar.',
-    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Barcelos, Portugal',
-           'Cosit a':'Igualada','Cintura':'Cordó pla, sense cremallera','Talles':'XS–XXL'},
+    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Europa · per tancar',
+           'Cosit a':'Catalunya o Portugal · per tancar','Cintura':'Cordó pla, sense cremallera','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
     cura:'Renta\u2019l a mà. El lli s\u2019estova cada estiu.',
     seg:'Sant Feliu de Guíxols · 18.04.2025 · 18:13 · 41,7875 N 3,0453 E' },
@@ -221,8 +221,8 @@ const PRODUCTES = [
     dv:'El mateix patró del Pantaló de Ronda, tallat a mig cuixa. Mateixa cintura de cordó, ' +
        'mateix lli, mateixes butxaques.',
     perque:'El mateix camí, quan fa massa calor per anar llarg.',
-    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Barcelos, Portugal',
-           'Cosit a':'Igualada','Llargada':'Mig cuixa','Talles':'XS–XXL'},
+    fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Europa · per tancar',
+           'Cosit a':'Catalunya o Portugal · per tancar','Llargada':'Mig cuixa','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
     cura:'Renta\u2019l a mà. El lli s\u2019estova cada estiu.',
     seg:'Aigua Xelida, Palafrugell · 17.05.2025 · 18:47 · 41,9222 N 3,2172 E' },
@@ -232,7 +232,7 @@ const PRODUCTES = [
     dv:'Fouta de 100 × 180 amb ratlla to sobre to i flocs curts. Pesa poc, s\u2019asseca de ' +
        'pressa i serveix de mantellina a taula o de xal a l\u2019horabaixa.',
     perque:'Perquè sota la tovallola sempre hi ha el mateix: granit.',
-    fitxa:{'Fibra':'Cotó orgànic','Mida':'100 × 180 cm','Teixit a':'Portugal','Acabat':'Flocs curts',
+    fitxa:{'Fibra':'Cotó orgànic','Mida':'100 × 180 cm','Teixit a':'Europa · per tancar','Acabat':'Flocs curts',
            'Etiqueta':'Teixida, cosida a 5 cm de la cantonada','Pes':'320 g'},
     talles:false,                      /* mida fixa, no talla */
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -244,7 +244,7 @@ const PRODUCTES = [
     dv:'110 × 190 de gasa de cotó. La capa de l\u2019hora blava: quan refresca, va a les ' +
        'espatlles damunt de la mateixa roba que portaves a la platja. També serveix de pareo.',
     perque:'Les deu és quan refresca i ningú no vol tornar a casa a buscar res.',
-    fitxa:{'Fibra':'Cotó orgànic GOTS','Mida':'110 × 190 cm','Teixit a':'Portugal',
+    fitxa:{'Fibra':'Cotó orgànic GOTS','Mida':'110 × 190 cm','Teixit a':'Europa · per tancar',
            'Acabat':'Vora enrotllada a mà','Pes':'180 g'},
     talles:false,                      /* mida fixa, no talla */
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -268,39 +268,17 @@ const PRODUCTES = [
     seg:'Un racó de la Costa Brava · 04.08.2026 · 10:51',
     nota:'Aquí hi hauria d\u2019anar una coordenada. No hi anirà. Qui hi ha estat, la reconeix.' },
 
-  /* El cal\u00e7at. Les set \u00e9s l'hora en qu\u00e8 surts de l'aigua i puges el cam\u00ed: \u00e9s
-     l'\u00fanic moment del dia en qu\u00e8 una sand\u00e0lia ha de fer les dues coses alhora,
-     agafar-se a la roca molla i no fer nosa a taula dues hores despr\u00e9s.
-     La tira \u00e9s de cinta teixida i no de cuir per un motiu que no \u00e9s est\u00e8tic: la
-     cinta es tenyeix i el cuir no. Si fos de cuir, el cat\u00e0leg tindria dues
-     excepcions a \u00abtots els colors a totes les peces\u00bb en comptes d'una. */
-  { id:'set', nom:'Sand\u00e0lia de les Set', cat:'unisex', tipus:'Cal\u00e7at', preu:110,
-    im:'img/ALG_dalt.jpg', imTipus:'lloc', etq:'Fons', hora:'07:00 \u2192 23:00',
-    dv:'Dues tires de cinta de lli teixida damunt d\u2019un llit de suro i una sola de cautx\u00fa ' +
-       'reciclat. Sense sivella: la tira del tal\u00f3 es tensa amb un passador pla, i per tant ' +
-       'no hi ha res met\u00e0l\u00b7lic que la sal es pugui menjar.',
-    perque:'Les set \u00e9s quan surts de l\u2019aigua i puges. Ha d\u2019anar b\u00e9 a la roca molla i, ' +
-           'dues hores despr\u00e9s, no fer nosa a sota d\u2019una taula.',
-    fitxa:{'Tires':'Cinta de lli 100% europeu, teixida','Llit':'Suro natural',
-           'Sola':'Cautx\u00fa reciclat, dibuix pla','Fet a':'Igualada','Talles':'36\u201347',
-           'Marcatge':'El s\u00edmbol brodat to sobre to a la tira interior','Pes':'240 g el parell'},
-    /* el calçat no es mesura en lletres */
-    talles:['36','37','38','39','40','41','42','43','44','45','46','47'],
-    colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
-    cura:'Esbandeix-la amb aigua dol\u00e7a quan torni de la platja i deixa-la assecar plana. ' +
-         'El suro es fa a la teva petjada: per aix\u00f2 el primer estiu \u00e9s el pitjor i el tercer, el millor.',
-    seg:'s\u2019Alguer, Palam\u00f3s · 04.08.2026 · 19:03 · 41,8617 N 3,1512 E',
-    nota:'No la fem de cuir. El cuir amb sal s\u2019endureix i, sobretot, no es pot tenyir amb ' +
-         'els colors de la Carta: seria la segona pe\u00e7a del cat\u00e0leg fora de la gamma, i amb ' +
-         'una ja n\u2019hi ha prou.' },
-
+  /* La Sandàlia de les Set s'ha tret del catàleg el 7 d'agost del 2026
+     (doc 18 · decisió D1, explicada al doc 19 §4.5): el calçat no és una peça
+     de roba amb sola, és una indústria a part —forma per número, MOQ per
+     número i fàbriques diferents—. La fitxa es conserva a _ARXIU. */
   { id:'ultima', nom:'Vestit d\u2019Última Llum', cat:'dona', tipus:'Vestit', preu:205,
     im:'img/IA_vestit.jpg', imTipus:'producte', etq:'Fons', hora:'18:00 → 23:00',
     dv:'Llarg, de tirant ample i caiguda recta. Esquena descoberta i davant cobert: es porta ' +
        'damunt del banyador i es queda per sopar.',
     perque:'Pels vint-i-cinc minuts que la marca ven i que no tornen.',
-    fitxa:{'Fibra':'Lli fi rentat','Gramatge':'140 g/m²','Teixit a':'Guimarães, Portugal',
-           'Cosit a':'Mataró','Silueta':'Recta, no marca','Talles':'XS–XXL'},
+    fitxa:{'Fibra':'Lli fi rentat','Gramatge':'140 g/m²','Teixit a':'Europa · per tancar',
+           'Cosit a':'Catalunya o Portugal · per tancar','Silueta':'Recta, no marca','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
     cura:'Renta\u2019l a mà i penja\u2019l moll: s\u2019estira sol.',
     seg:'Cala Moreta, Begur · 09.09.2024 · 19:36 · 41,9778 N 3,2097 E' },

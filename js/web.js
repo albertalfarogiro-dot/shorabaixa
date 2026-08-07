@@ -421,6 +421,25 @@ function frase(a) {
       s.style.background = hex(fons);
       s.classList.toggle('nocturn', !t.fosca);
       $('#estat').style.color = t.fosca ? '#C8802F' : '#E2A08B';
+      /* La meridiana es pinta amb colorDeLHora(), no amb un degradat escrit a
+         mà. El que hi havia abans era decoratiu i mentia: repartia els colors
+         de manera uniforme entre la sortida i la posta, i per tant a les
+         quatre de la tarda ja ensenyava coral i a les vuit del vespre, hora
+         blava —quan el sol encara trigava una hora a pondre's—. Ara la barra
+         ÉS el sistema: plana de color Sal tot el dia i tota l'escala amuntegada
+         a l'última hora, que és exactament el que diu la marca. */
+      var lin = document.querySelector('.meridiana-linia');
+      if (lin && !lin.dataset.pintada) {
+        var parades = [], N = 48;
+        for (var k = 0; k <= N; k++) {
+          var q = k / N;
+          var minut = a.sortida + q * ((a.posta + 60) - a.sortida);
+          parades.push(hex(colorDeLHora(minut - a.posta)) + ' ' + (q * 100).toFixed(1) + '%');
+        }
+        lin.style.background = 'linear-gradient(90deg,' + parades.join(',') + ')';
+        lin.dataset.pintada = '1';
+      }
+
       /* la meridiana recorre el dia sencer: de la sortida a la posta i més enllà */
       var g = document.getElementById('meridiana');
       if (g) {

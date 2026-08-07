@@ -731,6 +731,11 @@ img,video,svg{max-width:100%}
 .mom.ample .mom-im{aspect-ratio:4/5}
 .filtres-llista li{grid-template-columns:38px 1fr;gap:10px 14px}
 .filtres-llista span{grid-column:2}
+/* El títol també ha d'anar a la columna 2. Sense això queda dins dels 38 px
+   del número i es parteix lletra a lletra —«L'hor / a»—. Passava des del
+   principi als cinc filtres de marca.html; s'ha vist en fer la cadena del
+   pacte, que té títols més llargs. Corregit el 7 d'agost del 2026. */
+.filtres-llista li b{grid-column:2}
 }
 @media(max-width:860px){
 :root{--gut:20px;--t-base:16px;--t-s:18px;--t-xs:14px}
@@ -1130,9 +1135,12 @@ footer{padding:56px 0 40px}
 .banda.llum.nocturn .mini{color:rgba(245,241,233,.58)}
 .banda.llum.nocturn .lede{color:rgba(245,241,233,.82)}
 .banda.llum.nocturn .mini b{color:var(--sal)}
+/* El degradat real el pinta web.js amb colorDeLHora(), que és la mateixa
+   funció que dona el color de la pàgina: així la barra i el fons no poden
+   dir coses diferents. Això d'aquí sota només és el que es veu si el JS no
+   arriba a executar-se, i per això va de clar a fosc i prou. */
 .meridiana-linia{position:relative;height:3px;margin:44px 0 0;border:0;
-  background:linear-gradient(90deg,var(--sal),var(--llum) 22%,var(--or) 42%,
-    var(--coral) 58%,var(--malva) 70%,var(--horablava) 82%,var(--tinta))}
+  background:linear-gradient(90deg,var(--sal),var(--tinta))}
 .meridiana-linia i{position:absolute;top:-7px;width:1px;height:17px;background:var(--nit);
   transition:left 2.4s var(--corba)}
 .meridiana-linia i:after{content:"ara";position:absolute;top:-15px;left:50%;
