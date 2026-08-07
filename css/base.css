@@ -286,6 +286,42 @@ header nav a:hover{border-bottom-color:currentColor}
 .hero-peu em{color:var(--ambre-tx)}
 .hero-coord{color:var(--roca-tx);opacity:.8}
 
+/* ── EL RELLOTGE DE L'ESCRIPTORI ────────────────────────────────────────
+   Al telèfon el rellotge és el primer que hi ha, a pantalla sencera. A
+   l'escriptori vivia dins d'aquesta franja com un `.stamp` de 10 px en
+   versaleta, a la dreta del tot: **hi era però no es veia**. I és l'únic
+   element del lloc que canvia sol cada minut —l'únic motiu real per tornar
+   a obrir la pàgina—, o sigui que valia la pena que es llegís.
+
+   No es fa un bloc a part ni una pantalla de números: seria un pòster buit
+   i es menjaria la portada. Es queda **on ja era**, dins de la franja del
+   peu del hero, i només se li dona la mida que li toca: l'hora en didone,
+   la franja del dia al costat i el que falta per al sol a sota, en peu.
+   Així el rellotge es veu sense prendre-li el lloc a la fotografia.
+──────────────────────────────────────────────────────────────────────── */
+.hero-ara{display:grid;grid-template-columns:auto auto;gap:0 12px;
+  align-items:baseline;justify-items:start;text-align:left;letter-spacing:0;
+  text-transform:none;font-size:var(--t3)}
+.ha-et{font-size:var(--t1);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--roca-tx);grid-column:1/-1;margin-bottom:2px}
+.ha-h{font-family:var(--d);font-size:var(--t6);line-height:1;color:var(--vespre);
+  font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.ha-f{font-size:var(--t3);line-height:1.3;color:var(--roca-tx)}
+.ha-f em{font-style:normal;color:var(--ambre-tx)}
+.ha-min{grid-column:1/-1;margin-top:4px;font-size:var(--t2);letter-spacing:.12em;
+  text-transform:uppercase;color:var(--roca-tx);opacity:.9}
+.hero-peu{align-items:flex-end}
+@media(max-width:860px){
+  /* al telèfon la franja del hero es fa columna i el rellotge gran ja és
+     a `.hora-ma`: aquí es torna a fer peu perquè no es digui dues vegades */
+  .hero-ara{display:block}
+  .ha-et,.ha-h,.ha-f,.ha-min{font-size:var(--t1);letter-spacing:.16em;
+    text-transform:uppercase;color:var(--roca-tx);margin:0}
+  .ha-h{font-family:inherit;line-height:inherit}
+  .ha-et::after{content:" · "}
+  .ha-h::after{content:" · "}
+}
+
 /* ═══════════════════════════════════════════════════════════════════════
    MANIFEST
    ═══════════════════════════════════════════════════════════════════════ */

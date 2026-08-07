@@ -314,8 +314,14 @@ function frase(a) {
      matí a les set del vespre i es menjava el migdia, la tarda i l'horabaixa */
   function tic() {
     var a = ara();
-    e.innerHTML = 'Ara · ' + hhmm(a.m) + ' · <em>' + a.f.n + '</em>' +
-      (a.f.v ? ' <span class="ha-var">· ' + a.f.v + '</span>' : '') + '<br>' +
+    /* L'hora surt en un element propi perquè es pugui compondre en gran.
+       Abans tot anava dins d'un `.stamp` de 10 px en versaleta i el rellotge
+       de l'escriptori quedava amagat: la pàgina sabia quina hora era però no
+       ho semblava. Ara el número es llegeix i la resta continua sent peu. */
+    e.innerHTML = '<span class="ha-et">Ara</span>' +
+      '<span class="ha-h">' + hhmm(a.m) + '</span>' +
+      '<span class="ha-f"><em>' + a.f.n + '</em>' +
+      (a.f.v ? ' <span class="ha-var">· ' + a.f.v + '</span>' : '') + '</span>' +
       '<span class="ha-min">' + frase(a) + '</span>';
   }
   tic(); setInterval(tic, 30000);
