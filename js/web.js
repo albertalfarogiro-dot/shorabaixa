@@ -421,20 +421,26 @@ function frase(a) {
       s.style.background = hex(fons);
       s.classList.toggle('nocturn', !t.fosca);
       $('#estat').style.color = t.fosca ? '#C8802F' : '#E2A08B';
-      /* La meridiana es pinta amb colorDeLHora(), no amb un degradat escrit a
-         mà. El que hi havia abans era decoratiu i mentia: repartia els colors
-         de manera uniforme entre la sortida i la posta, i per tant a les
-         quatre de la tarda ja ensenyava coral i a les vuit del vespre, hora
-         blava —quan el sol encara trigava una hora a pondre's—. Ara la barra
-         ÉS el sistema: plana de color Sal tot el dia i tota l'escala amuntegada
-         a l'última hora, que és exactament el que diu la marca. */
+      /* LA MERIDIANA · el dia sencer, de mitjanit a mitjanit.
+         El dia és un cicle de 24 hores i la barra l'ha de dir sencer: nit
+         tancada, l'alba passant pel mateix rosa que la posta, el pla clar del
+         migdia amb el sol més vertical, la baixada de la tarda, l'horabaixa i
+         la nit un altre cop. Per això es pinta amb colorDelMoment(), que és la
+         mateixa funció que dona el color de la pàgina i que ja tria l'eix bo
+         —minuts des de la sortida al matí, minuts fins a la posta al vespre—.
+         Dues coses que s'havien fet malament abans:
+           · el degradat original era decoratiu i repartia els colors de manera
+             uniforme, i per això a les quatre de la tarda ja ensenyava coral;
+           · el primer arranjament el va lligar a colorDeLHora(dt), que només
+             modela el vespre, i a més retallava la barra de sortida a posta:
+             la nit i l'alba no hi sortien i el migdia no quedava al centre. */
       var lin = document.querySelector('.meridiana-linia');
       if (lin && !lin.dataset.pintada) {
-        var parades = [], N = 48;
+        var parades = [], N = 96;              /* un punt cada quart d'hora */
         for (var k = 0; k <= N; k++) {
-          var q = k / N;
-          var minut = a.sortida + q * ((a.posta + 60) - a.sortida);
-          parades.push(hex(colorDeLHora(minut - a.posta)) + ' ' + (q * 100).toFixed(1) + '%');
+          var minut = k * (1440 / N);
+          var c = colorDelMoment({ ds: minut - a.sortida, dt: minut - a.posta });
+          parades.push(hex(c) + ' ' + (k / N * 100).toFixed(2) + '%');
         }
         lin.style.background = 'linear-gradient(90deg,' + parades.join(',') + ')';
         lin.dataset.pintada = '1';
@@ -443,7 +449,9 @@ function frase(a) {
       /* la meridiana recorre el dia sencer: de la sortida a la posta i més enllà */
       var g = document.getElementById('meridiana');
       if (g) {
-        var f = (a.m - a.sortida) / Math.max(1, (a.posta + 60) - a.sortida);
+        /* la barra va de mitjanit a mitjanit, o sigui que el marcador és
+           simplement el minut del dia sobre 1.440 */
+        var f = a.m / 1440;
         /* es reté mig punt a cada punta: l'etiqueta «ara» va centrada damunt
            del marcador i, enganxada a la vora, es talla per la meitat. */
         g.style.left = (Math.max(0.6, Math.min(99.4, f * 100))).toFixed(2) + '%';
