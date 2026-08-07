@@ -429,7 +429,15 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
 }
 @media(max-width:860px){
   :root{--gut:20px}
-  html,body{overflow-x:hidden}
+    /* ── `clip` I NO `hidden`: és el que trencava la capçalera al mòbil ──────
+     Amb `overflow-x:hidden`, el navegador calcula l'`overflow-y` com a `auto`
+     i **`html` i `body` passen a ser contenidors de desplaçament**. Llavors el
+     `position:sticky` de la capçalera deixa de tenir el viewport com a
+     referència i **la capçalera se'n va amunt en baixar** —només al mòbil,
+     perquè aquesta regla només hi és—. `overflow-x:clip` reté igual el
+     desbordament horitzontal però **no crea contenidor de desplaçament**, i
+     per tant el sticky segueix funcionant. */
+  html,body{overflow-x:clip}
   img,video,svg{max-width:100%}
   h1,h2,h3,p,span,b{overflow-wrap:break-word}
   .nav{padding:15px 20px;gap:14px}
@@ -649,7 +657,15 @@ html{scroll-behavior:auto}
 }
 @media(max-width:860px){
 :root{--t-s:19px}
-html,body{overflow-x:hidden}
+  /* ── `clip` I NO `hidden`: és el que trencava la capçalera al mòbil ──────
+     Amb `overflow-x:hidden`, el navegador calcula l'`overflow-y` com a `auto`
+     i **`html` i `body` passen a ser contenidors de desplaçament**. Llavors el
+     `position:sticky` de la capçalera deixa de tenir el viewport com a
+     referència i **la capçalera se'n va amunt en baixar** —només al mòbil,
+     perquè aquesta regla només hi és—. `overflow-x:clip` reté igual el
+     desbordament horitzontal però **no crea contenidor de desplaçament**, i
+     per tant el sticky segueix funcionant. */
+  html,body{overflow-x:clip}
 img,video,svg{max-width:100%}
 .terr{grid-template-columns:1fr;gap:44px}
 .tres{gap:40px;margin-top:50px}
