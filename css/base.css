@@ -17,6 +17,54 @@
        tornen enrere mai. És el que deia el manual i la v1 no feia.
    ═══════════════════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════════════════
+   LES FONTS · auto-allotjades, agost del 2026
+
+   Fins avui el sistema tipogràfic eren dues llistes de fonts del sistema:
+   Gill Sans amb drets de Monotype i un didone que a Android no existia. El
+   visitant de Windows sense Office veia Segoe UI i el d'Android, Roboto i
+   Noto Serif. La marca es desmuntava sola en la meitat dels dispositius.
+
+   Ara van les dues aquí dins, amb llicència SIL Open Font License:
+
+   · JOST*        (Owen Earl · indestructible type) — geomètrica.
+                  Variable 100–900. Substitueix la Gill Sans.
+   · BODONI MODA  (Owen Earl) — didone amb EIX ÒPTIC (opsz 6–96): el
+                  titular gran prima el contrast i el text petit s'engreixa
+                  sol. Ni la Didot ni la Bodoni 72 del sistema ho fan.
+
+   Només s'hi declara el subconjunt LATIN i LATIN-EXT. El «latin» ja porta
+   tots els diacrítics catalans i el punt volat U+00B7, que és l'únic que
+   fa servir el web (458 cops). El navegador no baixa mai un subconjunt que
+   no necessita: en català només cau el primer.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url(../fonts/jost-normal-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Jost';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url(../fonts/jost-normal-latin-ext.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Jost';font-style:italic;font-weight:100 900;font-display:swap;
+  src:url(../fonts/jost-italic-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Jost';font-style:italic;font-weight:100 900;font-display:swap;
+  src:url(../fonts/jost-italic-latin-ext.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 900;font-display:swap;
+  src:url(../fonts/bodonimoda-normal-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 900;font-display:swap;
+  src:url(../fonts/bodonimoda-normal-latin-ext.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400 900;font-display:swap;
+  src:url(../fonts/bodonimoda-italic-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400 900;font-display:swap;
+  src:url(../fonts/bodonimoda-italic-latin-ext.woff2) format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
 :root{
   /* ── la paleta, intacta ─────────────────────────────────────────────── */
   --sal:#F5F1E9; --lli:#E6DCC7; --sorra:#C9BCA4; --roca:#6E6459; --rocagraf:#9A8B7A;
@@ -44,8 +92,12 @@
   --t7:clamp(30px,3.4vw,48px);       /* titular de secció */
   --t8:clamp(38px,5.4vw,82px);       /* titular de pàgina */
 
-  --g:"Gill Sans Nova","Gill Sans MT","Gill Sans",-apple-system,"Segoe UI",sans-serif;
-  --d:"Bodoni MT","Didot",Georgia,serif;
+  /* Les fonts del sistema HAN SORTIT de la llista a propòsit. Si hi quedés la
+     Gill Sans, el Mac la faria servir mentre carrega la Jost i tornaríem a
+     tenir dues marques: una per a l'Apple i una per a la resta. El que queda
+     al darrere només és una xarxa per si el fitxer no arriba mai. */
+  --g:"Jost",-apple-system,"Segoe UI",sans-serif;
+  --d:"Bodoni Moda","Didot",Georgia,serif;
 
   --gut:24px; --max:1280px;
   --corba:cubic-bezier(.33,0,.15,1);
@@ -435,9 +487,16 @@ footer{background:var(--nit);color:rgba(245,241,233,.82);padding:80px 0 56px}
   --malva:#9C7E92; --escuma:#DCD8CE; --plata:#AEB8B4; --blaum:#4A7C96; --verdf:#37605C;
   --horablava:#3C5A78; --vespre:#22384E; --tinta:#1B2A38; --terracota:#BE6440; --nit:#232322;
 
-  --g:"Gill Sans Nova","Gill Sans MT","Gill Sans",-apple-system,"Segoe UI",sans-serif;
-  --d:"Bodoni MT","Didot",Georgia,serif;
-  --b:"Baskerville Old Face","Baskerville",Georgia,serif;
+  /* Les fonts del sistema HAN SORTIT de la llista a propòsit. Si hi quedés la
+     Gill Sans, el Mac la faria servir mentre carrega la Jost i tornaríem a
+     tenir dues marques: una per a l'Apple i una per a la resta. El que queda
+     al darrere només és una xarxa per si el fitxer no arriba mai. */
+  --g:"Jost",-apple-system,"Segoe UI",sans-serif;
+  --d:"Bodoni Moda","Didot",Georgia,serif;
+  /* --b era una TERCERA família (Baskerville) heretada de la v1. No la fa
+     servir cap pàgina —zero aparicions de .bask a l'HTML— i fora de macOS
+     tampoc existeix. Apunta al didone de la marca per si algú la ressuscita. */
+  --b:"Bodoni Moda","Didot",Georgia,serif;
 
   --t-base:17px; --t-s:21px; --t-xs:14px; --t-micro:11px;
   --gut:24px; --max:1280px;
@@ -1034,7 +1093,13 @@ footer{padding:56px 0 40px}
 .arq-c p{font-size:var(--t3);line-height:1.75;color:#4a4a48;max-width:42ch}
 .etq-demo{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--gut)*2.4);
   align-items:center;margin-top:64px;padding-top:34px;border-top:1px solid var(--sorra)}
-.etq{font-family:Consolas,"Courier New",monospace;font-size:var(--t3);line-height:2;
+/* .etq era l'última font del sistema que quedava: Consolas només existeix a
+   Windows, el Mac queia a Courier New i l'Android a Droid Sans Mono —tres
+   etiquetes diferents per a la mateixa etiqueta teixida. I l'etiqueta de debò
+   no anirà mai en monoespaiada: anirà en la tipografia de la marca. Les xifres
+   tabulars mantenen la lectura de document tècnic. */
+.etq{font-family:var(--g);font-variant-numeric:tabular-nums;letter-spacing:.04em;
+  font-size:var(--t3);line-height:2;
   background:var(--lli);border-left:2px solid var(--ambre);padding:22px 26px;
   color:var(--vespre);white-space:pre;overflow-x:auto}
 .taula-comp{border-top:1px solid var(--sorra)}
@@ -1448,3 +1513,26 @@ main:focus{outline:none}
   color:rgba(245,241,233,.9);background:linear-gradient(transparent,rgba(19,31,43,.72))}
 .seq figcaption em{font-style:normal;color:var(--rosa)}
 @media(max-width:860px){.seq{grid-template-columns:1fr 1fr}}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   L'EIX ÒPTIC DE LA BODONI MODA · va l'últim perquè mana sobre tot
+
+   Per defecte el navegador fa `font-optical-sizing:auto`, que vol dir posar
+   l'`opsz` igual al cos en píxels. En un titular de portada de 82 px això
+   dona `opsz` 82 —el tall de display més extrem de la família— i **els
+   traços fins es queden a un píxel escàs**: la barra de la «t» i de la «f»,
+   la cintura de la «a» i de la «e» i els filets de la «o» s'esvaeixen en un
+   gris fantasma. En pantalles sense retina, i en qualsevol captura o
+   fotografia de la pàgina, directament desapareixen.
+
+   L'`opsz` no diu «com de gran és el text»: diu **a quina mida es mirarà**.
+   Fixat a 20 el filet aguanta la rasterització a tota l'escala de vuit
+   passos —de 9 px a 82— i la didone conserva el contrast que la fa didone.
+   Provat als quatre valors: auto · 30 · 20 · 14.
+
+   La Jost no té eix òptic i per tant això no l'afecta; i s'ha comprovat que
+   declarar `font-variation-settings` **no anul·la el `font-weight`**
+   (Light, Regular, Medium i Bold segueixen sortint diferents).
+   ═══════════════════════════════════════════════════════════════════════ */
+body{font-optical-sizing:none;font-variation-settings:"opsz" 20}

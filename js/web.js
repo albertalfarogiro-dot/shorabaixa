@@ -54,10 +54,52 @@ function pintaImatges(arrel) {
 
 /* ── LA POSTA REAL · Palafrugell, 41,917 N 3,163 E ────────────────────── */
 var LAT = 41.9174, LON = 3.1628;
+
+/* ── L'HORA DE LA COSTA BRAVA ─────────────────────────────────────────────
+   Aquesta pàgina no diu quina hora és al visitant: diu quina hora és A LA
+   COSTA BRAVA. És el que promet la marca —«venem una hora», aquella— i és
+   l'única lectura que no menteix a ningú.
+
+   Abans es barrejaven dues coses: el rellotge sortia de `getHours()`, o sigui
+   del rellotge del visitant, i el sol es calculava sempre per a Palafrugell.
+   Un visitant a Londres llegia «21:34 · l'hora blava» quan a la costa eren les
+   22:34 i l'hora blava havia passat feia una hora; un de Nova York llegia
+   «la tarda» amb la costa a plena nit. Ni el seu sol ni la nostra hora.
+
+   El desplaçament horari es demana a l'Intl, que porta la base de dades de
+   fusos del navegador. Abans es deduïa del dia de l'any amb
+   `(n > 85 && n < 302) ? 2 : 1`, i això fallava cinc dies l'any: el 2026, del
+   26 al 27 de març i del 25 al 27 d'octubre la pàgina donava sortida i posta
+   amb UNA HORA DE MÉS. En una marca que va néixer de corregir hores falses,
+   això no es podia quedar.                                                  */
+var FUS = 'Europe/Madrid';
+var _fmtCosta = null;
+try {
+  _fmtCosta = new Intl.DateTimeFormat('en-GB', { timeZone: FUS, hourCycle: 'h23',
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+  _fmtCosta.formatToParts(new Date());
+} catch (e) { _fmtCosta = null; }
+
+function alaCosta(d) {
+  /* Torna la data de calendari i el minut del dia A LA COSTA, i el
+     desplaçament real d'aquell instant respecte de l'UTC (+1 o +2). */
+  if (!_fmtCosta) {                    /* xarxa de seguretat: el rellotge d'aquí */
+    return { any: d.getFullYear(), mes: d.getMonth() + 1, dia: d.getDate(),
+             m: d.getHours() * 60 + d.getMinutes(), tz: -d.getTimezoneOffset() / 60 };
+  }
+  var p = {}, parts = _fmtCosta.formatToParts(d), i;
+  for (i = 0; i < parts.length; i++) p[parts[i].type] = parts[i].value;
+  var any = +p.year, mes = +p.month, dia = +p.day, hh = +p.hour, mm = +p.minute;
+  var minut = Math.floor(d.getTime() / 6e4) * 6e4;
+  return { any: any, mes: mes, dia: dia, m: hh * 60 + mm,
+           tz: (Date.UTC(any, mes - 1, dia, hh, mm) - minut) / 36e5 };
+}
+
 function solDe(d) {
-  /* NOAA. Torna la sortida i la posta del dia, en minuts des de mitjanit. */
-  var n = Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
-  var jd = (Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5) + 2440587.5;
+  /* NOAA. Torna la sortida i la posta del dia, en minuts des de mitjanit,
+     en hora de la Costa Brava. */
+  var c = alaCosta(d);
+  var jd = (Date.UTC(c.any, c.mes - 1, c.dia) / 864e5) + 2440587.5;
   var t = (jd - 2451545) / 36525;
   var L0 = (280.46646 + t * (36000.76983 + t * 0.0003032)) % 360;
   var M = 357.52911 + t * (35999.05029 - 0.0001537 * t), Mr = M * Math.PI / 180;
@@ -77,8 +119,7 @@ function solDe(d) {
            - Math.tan(latr) * Math.tan(decl);
   cosH = Math.max(-1, Math.min(1, cosH));
   var H = Math.acos(cosH) * 180 / Math.PI;
-  var tz = (n > 85 && n < 302) ? 2 : 1;                    /* CEST aproximat */
-  var migdia = 720 + 4 * (-LON) - eqt + tz * 60;           /* migdia solar */
+  var migdia = 720 + 4 * (-LON) - eqt + c.tz * 60;         /* migdia solar */
   return { sortida: migdia - 4 * H, posta: migdia + 4 * H };
 }
 
@@ -124,7 +165,9 @@ function fase(ds, dt, m, sortida, posta) {
 function ara() {
   var d = new Date();
   var s = solDe(d);
-  var m = d.getHours() * 60 + d.getMinutes();
+  /* el minut és el de la costa, no el del visitant: si no, el rellotge i el
+     sol serien de dos llocs diferents i la fase sortiria falsa */
+  var m = alaCosta(d).m;
   /* de matinada la referència vàlida és la sortida d'avui; passada la posta,
      la sortida de demà. Així mai no es compten mil dues-centes minuts. */
   var seguent = s.sortida;
