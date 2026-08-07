@@ -187,7 +187,7 @@ const PRODUCTES = [
     im:'img/IA_vuit.jpg', imTipus:'producte', etq:'Fons', hora:'11:00 → 22:00',
     dv:'Coll cubà obert, sense passadors. Prou fina per portar-la damunt de la pell molla, ' +
        'prou seriosa per anar a sopar. Dos talls: recte i afuat.',
-    perque:'Les vuit és l\u2019hora en què surts sense haver-te canviat.',
+    perque:'Les vuit és l’hora en què surts sense haver-te canviat. El coll obert i el cos ample hi són perquè no ho hagis de fer.',
     fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'165 g/m²','Teixit a':'Europa · per tancar',
            'Cosit a':'Catalunya o Portugal · per tancar','Acabat':'Tenyit en peça','Talls':'Recte i afuat','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -198,7 +198,7 @@ const PRODUCTES = [
     im:'img/IA_camisabany.jpg', imTipus:'producte', etq:'Fons', hora:'11:00 → 21:00',
     dv:'Gasa de cotó doble, ampla i de mànega tres quarts. Es porta damunt del banyador o ' +
        'directament damunt de la pell, i es comparteix.',
-    perque:'És la que et poses moll i que a mig camí ja no ho està.',
+    perque:'És la que et poses moll, abans d’eixugar-te. Gasa doble i mànega tres quarts: tapa sense enganxar-se i s’asseca a sobre teu.',
     fitxa:{'Fibra':'Cotó orgànic GOTS','Gramatge':'130 g/m²','Teixit a':'Europa · per tancar','Cosit a':'Catalunya o Portugal · per tancar',
            'Acabat':'Gasa doble arrugada','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -209,7 +209,7 @@ const PRODUCTES = [
     im:'img/IA_ronda.jpg', imTipus:'producte', etq:'Fons', hora:'10:00 → 23:00',
     dv:'Ample, cordó pla de cotó i elàstic posterior dissimulat. Sense cremallera: vint-i-quatre ' +
        'segons per posar-te\u2019l i tot un vespre per treure-te\u2019l.',
-    perque:'Del camí de ronda, que és el que separa la platja del sopar.',
+    perque:'Del camí de ronda, que és el que separa la platja del sopar. Cordó pla i sense cremallera: te’l poses amb els peus plens de sorra.',
     fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Europa · per tancar',
            'Cosit a':'Catalunya o Portugal · per tancar','Cintura':'Cordó pla, sense cremallera','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -220,7 +220,7 @@ const PRODUCTES = [
     im:'img/IA_curt.jpg', imTipus:'producte', etq:'Fons', hora:'10:00 → 21:00',
     dv:'El mateix patró del Pantaló de Ronda, tallat a mig cuixa. Mateixa cintura de cordó, ' +
        'mateix lli, mateixes butxaques.',
-    perque:'El mateix camí, quan fa massa calor per anar llarg.',
+    perque:'El mateix camí, quan fa massa calor per anar llarg. Mateix cordó i mateix gest, un pam menys de tela.',
     fitxa:{'Fibra':'Lli 100% europeu','Gramatge':'200 g/m²','Teixit a':'Europa · per tancar',
            'Cosit a':'Catalunya o Portugal · per tancar','Llargada':'Mig cuixa','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -231,7 +231,7 @@ const PRODUCTES = [
     im:'img/MAT_ratlla.jpg', imTipus:'producte', etq:'Fons', hora:'tot el dia',
     dv:'Fouta de 100 × 180 amb ratlla to sobre to i flocs curts. Pesa poc, s\u2019asseca de ' +
        'pressa i serveix de mantellina a taula o de xal a l\u2019horabaixa.',
-    perque:'Perquè sota la tovallola sempre hi ha el mateix: granit.',
+    perque:'Perquè sota la tovallola sempre hi ha el mateix: granit. És plana i prima per això —s’estén damunt de la roca i no se n’endú la sorra.',
     fitxa:{'Fibra':'Cotó orgànic','Mida':'100 × 180 cm','Teixit a':'Europa · per tancar','Acabat':'Flocs curts',
            'Etiqueta':'Teixida, cosida a 5 cm de la cantonada','Pes':'320 g'},
     talles:false,                      /* mida fixa, no talla */
@@ -243,7 +243,7 @@ const PRODUCTES = [
     im:'img/IA_xal.jpg', imTipus:'producte', etq:'Peça de l\u2019any', hora:'20:00 → 00:00',
     dv:'110 × 190 de gasa de cotó. La capa de l\u2019hora blava: quan refresca, va a les ' +
        'espatlles damunt de la mateixa roba que portaves a la platja. També serveix de pareo.',
-    perque:'Les deu és quan refresca i ningú no vol tornar a casa a buscar res.',
+    perque:'Les deu és quan refresca i ningú no vol tornar a casa a buscar res. Per això va a la bossa des de les set, i per això pesa el que pesa.',
     fitxa:{'Fibra':'Cotó orgànic GOTS','Mida':'110 × 190 cm','Teixit a':'Europa · per tancar',
            'Acabat':'Vora enrotllada a mà','Pes':'180 g'},
     talles:false,                      /* mida fixa, no talla */
@@ -257,7 +257,7 @@ const PRODUCTES = [
     im:'img/IA_raco.jpg', imTipus:'producte', etq:'Ofici', hora:'—',
     dv:'Cabàs de palma natural teixida en un taller d\u2019espart, amb nanses de cuir vegetal. ' +
        'Prou gran per a tovallola i llibre. 38 × 34 × 16.',
-    perque:'És l\u2019única peça de la casa que no diu d\u2019on és. I no ho dirà.',
+    perque:'Del que diem quan no volem dir el lloc: «un racó de la Costa Brava». És l’única peça que porta per nom una discreció, i l’única que no es tenyeix.',
     fitxa:{'Matèria':'Palma natural teixida','Nanses':'Cuir vegetal','Fet a':'Taller d\u2019espart',
            'Mida':'38 × 34 × 16 cm','Marcatge':'Etiqueta de cuir cosida al centre','Pes':'480 g'},
     /* l'\u00fanica excepci\u00f3 de tot el cat\u00e0leg: la palma teixida no es tenyeix, i
@@ -276,7 +276,7 @@ const PRODUCTES = [
     im:'img/IA_vestit.jpg', imTipus:'producte', etq:'Fons', hora:'18:00 → 23:00',
     dv:'Llarg, de tirant ample i caiguda recta. Esquena descoberta i davant cobert: es porta ' +
        'damunt del banyador i es queda per sopar.',
-    perque:'Pels vint-i-cinc minuts que la marca ven i que no tornen.',
+    perque:'Pels vint-i-cinc minuts que la marca ven i que no tornen. Cau, no s’aguanta: a aquesta hora la roba ha de fer el mateix que el cel.',
     fitxa:{'Fibra':'Lli fi rentat','Gramatge':'140 g/m²','Teixit a':'Europa · per tancar',
            'Cosit a':'Catalunya o Portugal · per tancar','Silueta':'Recta, no marca','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -287,7 +287,7 @@ const PRODUCTES = [
     im:'img/IA_marea.jpg', imTipus:'producte', etq:'Fons', hora:'09:00 → 21:00',
     dv:'Una peça, escot quadrat, esquena creuada i doble capa. Sosté sense semblar ortopèdic, ' +
        'i fins a la XXL des del primer dia.',
-    perque:'Puja i baixa, com l\u2019aigua. I com el cos, que no és el mateix cada estiu.',
+    perque:'Puja i baixa, com l’aigua. I com el cos, que no és el mateix cada estiu. Talla alta i esquena sencera: subjecta sense estrènyer.',
     fitxa:{'Fibra':'Poliamida reciclada','Gramatge':'200 g/m² doble capa',
            'Tirants':'Amples i regulables','Acabat':'Mat, sense brillantor',
            'Marcatge':'Etiqueta teixida interior','Talles':'XS–XXL'},
@@ -299,7 +299,7 @@ const PRODUCTES = [
     im:'img/IA_bikini.jpg', imTipus:'producte', etq:'Fons', hora:'09:00 → 20:00',
     dv:'Top d\u2019aro suau i braga de talle mitjà, tots dos de doble capa i acabat mat. Es ven ' +
        'per conjunt, però les talles es trien per separat.',
-    perque:'La sal és el que et queda a la pell quan surts, i el que ha d\u2019aguantar el teixit.',
+    perque:'La sal és el que et queda a la pell quan surts, i el que ha d’aguantar el teixit. Doble capa, perquè un bikini es jutja moll i no sec.',
     fitxa:{'Fibra':'Poliamida reciclada','Gramatge':'190 g/m² doble capa',
            'Top':'Aro suau, tirant regulable','Braga':'Talle mitjà, cobertura mitjana',
            'Acabat':'Mat','Talles':'XS–XXL, per separat'},
@@ -311,7 +311,7 @@ const PRODUCTES = [
     im:'img/OR_esquena.jpg', imTipus:'lloc', imNota:'Encara no tenim aquesta peça fotografiada. Això és s’Alguer, que és d’on ve el seu nom i on es farà la sessió.', etq:'Fons', hora:'09:00 → 21:00',
     dv:'Curt, 15 cm d\u2019entrecama. Teixit mat i llis, sense estampat: es pot portar sota una ' +
        'camisa oberta a taula sense que sembli que véns de la platja.',
-    perque:'Aigua fonda. Res a ensenyar.',
+    perque:'Aigua fonda, i res a ensenyar. També és del Fons del catàleg: no marxarà cap estiu, i el podràs reposar igual d’aquí a cinc.',
     fitxa:{'Fibra':'Poliamida reciclada','Gramatge':'190 g/m²','Entrecama':'15 cm',
            'Forro':'Reciclat','Butxaques':'Dues laterals i una posterior amb ullet','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
@@ -322,7 +322,7 @@ const PRODUCTES = [
     im:'img/ALG_dalt.jpg', imTipus:'lloc', imNota:'Encara no tenim aquesta peça fotografiada. Això és s’Alguer, que és el lloc que li correspon.', etq:'Fons', hora:'09:00 → 21:00',
     dv:'Llarg, 22 cm d\u2019entrecama, just sobre el genoll. Mateix teixit i mateix acabat mat ' +
        'que el de Fons, per a qui no vol anar curt.',
-    perque:'El garbí és el vent de mar de la tarda. Bufa quan encara ets a l\u2019aigua.',
+    perque:'El garbí és el vent de mar de la tarda: bufa quan encara ets a l’aigua. I quan surts, aquest s’asseca abans que arribis a la tovallola.',
     fitxa:{'Fibra':'Poliamida reciclada','Gramatge':'190 g/m²','Entrecama':'22 cm',
            'Forro':'Reciclat','Butxaques':'Dues laterals i una posterior amb ullet','Talles':'XS–XXL'},
     colors:['Sal','Lli cru','Verd de pi','Roca','Nit'], carta:['Ambre 20:39','Rosa 19:35','Blava 20:49'],
