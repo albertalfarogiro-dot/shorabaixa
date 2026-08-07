@@ -794,13 +794,26 @@ img,video,svg{max-width:100%}
 .moments,.veu{grid-template-columns:1fr}
 .mom.ample{grid-column:span 1}
 .mom.ample .mom-im{aspect-ratio:4/5}
-.filtres-llista li{grid-template-columns:minmax(38px,max-content) 1fr;gap:10px 14px}
-.filtres-llista span{grid-column:2}
-/* El títol també ha d'anar a la columna 2. Sense això queda dins dels 38 px
-   del número i es parteix lletra a lletra —«L'hor / a»—. Passava des del
-   principi als cinc filtres de marca.html; s'ha vist en fer la cadena del
-   pacte, que té títols més llargs. Corregit el 7 d'agost del 2026. */
-.filtres-llista li b{grid-column:2}
+/* ── LA LLISTA DE FILTRES, AL MÒBIL · UNA SOLA COLUMNA ──────────────────
+   Hi havia una graella de `38px 1fr` **amb la primera columna sempre buida**.
+   El motiu: `.fm-n` és un `<span>`, o sigui que la regla que enviava els
+   textos a la columna 2 també se l'enduia, i amb el títol hi anaven els tres
+   fills. Resultat: **52 px morts** —38 de columna més 14 de buit— a l'esquerra
+   de cada fila de les cinc llistes de `cataleg.html` i `marca.html`, i el text
+   espremut a la dreta sense que res ocupés el marge.
+
+   Al mòbil no hi cap una columna de rètol: en 390 px, deixar-hi «I llavors»
+   voldria dir 85 px de rètol i 190 de text, que no és una columna de lectura.
+   Per tant, **una sola columna**: el segell fa de rètol damunt del títol, que
+   és el que ja sembla que vol ser, i el text recupera l'amplada sencera.
+
+   Compte si algú ho torna a tocar: amb una sola columna, **cap fill no pot
+   dur `grid-column:2`** —crearia una segona columna implícita i tornaríem a
+   tenir el forat—. Per això aquí s'hi posa l'1 explícitament.
+──────────────────────────────────────────────────────────────────────── */
+.filtres-llista li{grid-template-columns:1fr;gap:6px 0}
+.filtres-llista li>*{grid-column:1}
+.filtres-llista .fm-n{margin-bottom:2px}
 }
 @media(max-width:860px){
 :root{--gut:20px;--t-base:16px;--t-s:18px;--t-xs:14px}
