@@ -784,7 +784,13 @@ html{scroll-behavior:auto}
   header{top:calc(-1 * var(--franja-h))}
 img,video,svg{max-width:100%}
 .terr{grid-template-columns:1fr;gap:44px}
-.tres{gap:40px;margin-top:50px}
+/* ── `.tres` es quedava a TRES COLUMNES al telèfon ──────────────────────
+   Aquesta regla només tocava el buit i el marge: les columnes seguien sent
+   `repeat(3,1fr)`, i en un mòbil de 390 px això dona **82 px per columna**.
+   Il·legible. Afectava sis blocs de `cataleg`, `marca` i `vivim`, i hi era
+   des del principi —només `.tres.quatre` baixava a una columna—.
+   Mesurat el 8 d'agost del 2026: 326 px de caixa, 82 de columna. */
+.tres{grid-template-columns:1fr;gap:40px;margin-top:50px}
 .arxiu{grid-template-columns:repeat(2,1fr)}
 .arxiu figure:last-child{grid-column:span 2;aspect-ratio:16/9}
 .arxiu-graella,.mapa{grid-template-columns:1fr}
