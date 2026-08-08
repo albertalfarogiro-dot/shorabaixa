@@ -314,12 +314,21 @@ header nav a:hover{border-bottom-color:currentColor}
 @media(max-width:860px){
   /* al telèfon la franja del hero es fa columna i el rellotge gran ja és
      a `.hora-ma`: aquí es torna a fer peu perquè no es digui dues vegades */
+  /* L'`align-items:flex-end` de l'escriptori es colava aquí: amb el peu en
+     columna deixava els tres elements alineats a la DRETA i cadascun
+     començant en un lloc diferent —x=20, x=244, x=62 a 390 px—, que és per
+     què el rellotge semblava desencaixat de la cartel·la. */
+  .hero-peu{align-items:flex-start}
   .hero-ara{display:block}
   .ha-et,.ha-h,.ha-f,.ha-min{font-size:var(--t1);letter-spacing:.16em;
     text-transform:uppercase;color:var(--roca-tx);margin:0}
   .ha-h{font-family:inherit;line-height:inherit}
   .ha-et::after{content:" · "}
   .ha-h::after{content:" · "}
+  /* els minuts, a la seva línia: enganxats a la franja sortia «MIGDIAFALTEN
+     6 H 16 MIN». Així el mòbil repeteix l'estructura de l'escriptori: una
+     línia amb l'hora i la franja, i una altra amb el que falta. */
+  .ha-min{display:block;margin-top:3px}
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
