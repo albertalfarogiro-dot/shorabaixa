@@ -455,7 +455,7 @@ const PALETA = [
 const CODIS = [
   { n:'01', t:'El sol mig post',
     tx:'El símbol és mig cercle i una línia. No és una posta: és el moment exacte en què el '+
-       'sol i l’aigua es toquen. Es fa amb dues tintes i mai amb color.' },
+       'sol toca l’horitzó. Es fa amb dues tintes i mai amb color.' },
   { n:'02', t:'Dues tintes, mai una tercera',
     tx:'A cada suport hi ha un fons i una tinta. Si una peça necessita tres colors per '+
        'funcionar, la peça està mal resolta.' },

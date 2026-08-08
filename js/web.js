@@ -458,7 +458,7 @@ function frase(a) {
     $('#estat').textContent = a.f.n;
     var p = $('#postaAvui');
     if (p) p.innerHTML = 'Avui el sol surt a les <b>' + hhmm(a.sortida) +
-      '</b> i entra a l’aigua a les <b>' + hhmm(a.posta) + '</b><br>' +
+      '</b> i es pon a les <b>' + hhmm(a.posta) + '</b><br>' +
       '<span class="pa-frase">' + frase(a) + '</span>';
 
     /* la secció es tenyeix del color d’aquest minut i la tinta es recalcula.
